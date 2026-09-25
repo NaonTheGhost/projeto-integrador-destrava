@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+    <main id="conteudo-login">
+        <div class="bloco bloco-login">
+            <div class="marca-login">
+
+            </div>
+            <h1>Entrar</h1>
+
+            <form id="form-login" action="#" method="post">
+                <div class="campo">
+                    <label for="input-email">E-mail</label>
+                    <input type="email" id="input-email" name="email" required>
+                </div>
+                <div class="campo">
+                    <label for="input-password">Senha</label>
+                    <input type="password" id="input-password" name="senha" required>
+                </div>
+
+                <div class="campo campo-options">
+                    <label class="campo-checkbox">
+                        <input type="checkbox" id="input-memory" name="lembrar">
+                        Lembrar de mim.
+                    </label>
+                    <a href="pages/recuperar-senha.html" class="link-forgotten-password">Esqueci minha senha</a>
+                </div>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p class="cadastro-login">
+                Ainda não tem conta? <a href="pages/cadastro.html">Criar conta</a>
+            </p>
+
+            <p class="cadastro-login-empresas">
+                Representa uma empresa ainda não cadastrada? <a href="pages/cadastro.html">Criar conta</a>
+            </p>
+        </div>
+    </main>
+    <script src="assets/JS/script.js"></script>
+</body>
+</html>
