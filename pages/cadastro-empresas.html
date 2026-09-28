@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro para empresas</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+    <main id="conteudo-cadastro">
+        <div class="bloco bloco-cadastro">
+            <div class="cadastro-marca">
+                <!--Logo ou nome do site. Adicionamos mais tarde.-->
+            </div>
+            <h1>Criar conta empresarial</h1>
+            <form id="form-cadastro" action="#" method="post">
+                <div class="campo-cadastro">
+                    <label for="input-nome"></label>
+                    <input type="text" id="input-nome" name="nome" required>
+                </div>
+
+                <div class="campo-cadastro">
+                    <label for="input-email-cadastro">E-mail</label>
+                    <input type="email" id="input-email-cadastro" name="email">
+                </div>
+
+                <div class="campo-cadastro">
+                    <label for="input-senha-cadastro">Senha</label>
+                    <input type="password" id="input-senha-cadastro" name="password" required>
+                </div>
+
+                <div class="campo-cadastro">
+                    <label for="input-confirmar-senha">Confirme sua senha</label>
+                <input type="password" id="input-confirmar-senha" name="confirmarSenha" required>
+                </div>
+
+                <div class="campo campo-checkbox-termos">
+                    <label class="campo-checkbox-termos">
+                        <input type="checkbox" id="input-termos" name="termos" required>
+                        Li e aceito os <a href="#">termos de serviço</a>
+                    </label>
+                </div>
+
+                <button type="submit">Criar conta</button>
+            </form>
+
+            <p class="cadastro-login">
+                Já tem uma conta? <a href="../index.html">Entrar</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="/assets/JS/script.js"></script>
+</body>

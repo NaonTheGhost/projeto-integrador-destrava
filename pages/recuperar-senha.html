@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar senha</title>
+    <link rel="stylesheet" href="/assets/CSS/style.css">
+</head>
+<body>
+    <main id="conteudo-recuperar-senha">
+        <div class="bloco bloco-recuperar-senha">
+            <div class="marca-recuperar-senha">
+                <!--Logo/nome do nosso site.-->
+            </div>
+
+            <h1>Recuperar senha</h1>
+
+            <p class="instrucoes-recuperacao">
+                <!--Um texto curto explicando como recuperar a senha. Pensamos nisso logo.-->
+            </p>
+
+            <form id="form-recuperar-senha" action="#" method="post">
+                <div class="campo-recuperar-senha">
+                    <label for="input-email-recuperacao">E-mail</label>
+                    <input type="email" id="input-email-recuperacao" name="email" required>
+                </div>
+
+                <button type="submit">Enviar link de recuperação</button>
+            </form>
+
+            <div id="mensagem-recuperacao" class="mensagem-feedback" hidden>
+                <!--Feedback exibido após o envio do código. Indica o sucesso ou erro da ação.-->
+            </div>
+
+            <p class="recuperar-voltar">
+                <a href="../index.html">Voltar para o login</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
