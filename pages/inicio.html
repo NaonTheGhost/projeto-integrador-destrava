@@ -1,15 +1,386 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/CSS/style.css">
+
+    <title>Destrava | Seu futuro começa aqui</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="js/script.js"></script>
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-    <h1>Olá, Mundo!</h1>    
-    
-    <script src="assets/JS/script.js"></script>
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+        <div class="logo">
+            <span>des</span>trava
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="ativo">Início</a>
+            <a href="#">Minha Carreira</a>
+            <a href="#">Cursos</a>
+            <a href="#">Vagas</a>
+        </nav>
+
+        <div class="usuario">
+            <button class="notificacao">🔔</button>
+            <div class="perfil">
+                <div class="avatar">M</div>
+                <span>Marina</span>
+            </div>
+
+        </div>
+
+    </header>
+    <!--HERO-->
+    <main>
+        <section class="hero">
+            <div class="hero-texto">
+                <span class="tag"> SEU FUTURO COMEÇA AQUI</span>
+                <h1>
+                    Destrave o seu
+                    <span>potencial.</span>
+                </h1>
+
+                <p>
+                    Aprenda novas habilidades, encontre oportunidades
+                    e dê o próximo passo na sua carreira.
+                </p>
+
+                <div class="botoes">
+
+                    <button class="btn-principal">
+                        Começar agora →
+                    </button>
+
+                    <button class="btn-secundario">
+                        Explorar cursos
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--objetivos-->
+        <section class="objetivos">
+            <div class="titulo">
+                <span>COMECE POR AQUI</span>
+                <h2>
+                    O que você quer <strong>destravar?</strong>
+                </h2>
+                <p>
+                    Escolha um caminho e comece a construir seu futuro.
+                </p>
+            </div>
+
+            <div class="cards-objetivos">
+                <div class="objetivo-card verde">
+                    <div class="icone">💼</div>
+                    <h3>Minha carreira</h3>
+                    <p>
+                        Descubra caminhos profissionais
+                        que combinam com você.
+                    </p>
+                    <button>Explorar →</button>
+                </div>
+
+                <div class="objetivo-card azul">
+                    <div class="icone">📚</div>
+                    <h3>Quero aprender</h3>
+                    <p>
+                        Desenvolva habilidades para
+                        se destacar no mercado.
+                    </p>
+                    <button>Ver cursos →</button>
+                </div>
+
+                <div class="objetivo-card laranja">
+                    <div class="icone">🎯</div>
+                    <h3>Meu objetivo</h3>
+                    <p>
+                        Transforme seus objetivos
+                        em pequenos passos.
+                    </p>
+                    <button>Começar →</button>
+                </div>
+
+                <div class="objetivo-card azul-claro">
+                    <div class="icone">🚀</div>
+                    <h3>Meu futuro</h3>
+                    <p>
+                        Planeje sua trajetória
+                        profissional.
+                    </p>
+                    <button>Planejar →</button>
+                </div>
+            </div>
+        </section>
+        <!--cursos-->
+        <section class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <span>APRENDA NO SEU RITMO</span>
+                    <h2>
+                        Cursos para <strong>destravar</strong>
+                    </h2>
+                    <p>
+                        Aprenda habilidades que podem fazer diferença
+                        na sua carreira.
+                    </p>
+                </div>
+                <a href="#">Ver todos →</a>
+            </div>
+
+            <div class="carrossel-container">
+                <button class="seta esquerda" id="cursoAnterior">
+                    ‹
+                </button>
+
+                <div class="carrossel" id="carrosselCursos">
+                    <article class="curso-card">
+                        <div class="curso-imagem verde-fundo">
+                            💻
+                        </div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">TECNOLOGIA</span>
+                            <h3>Introdução ao HTML e CSS</h3>
+                            <p>
+                                Aprenda a criar suas primeiras páginas.
+                            </p>
+                            <div class="curso-info">
+                                 8 horas
+                                <span> 4.9</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="curso-card">
+                        <div class="curso-imagem laranja-fundo">
+                            🗣️
+                        </div>
+
+                        <div class="curso-conteudo">
+                            <span class="categoria">CARREIRA</span>
+                            <h3>Comunicação profissional</h3>
+                            <p>
+                                Aprenda a se comunicar melhor.
+                            </p>
+                            <div class="curso-info">
+                                 5 horas
+                                <span> 4.8</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="curso-card">
+                        <div class="curso-imagem azul-fundo">
+                            📄
+                        </div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">CARREIRA</span>
+                            <h3>Como criar seu currículo</h3>
+                            <p>
+                                Monte um currículo que destaque você.
+                            </p>
+                            <div class="curso-info">
+                                 3 horas
+                                <span> 4.9</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="curso-card">
+                        <div class="curso-imagem verde2-fundo">
+                            🎤
+                        </div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">DESENVOLVIMENTO</span>
+                            <h3>Como falar em público</h3>
+                            <p>
+                                Desenvolva sua confiança.
+                            </p>
+                            <div class="curso-info">
+                                 4 horas
+                                <span> 4.7</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+                <button class="seta direita" id="cursoProximo">
+                    ›
+                </button>
+
+            </div>
+
+        </section>
+        <!-- vagas-->
+        <section class="secao oportunidades">
+            <div class="titulo-secao">
+                <div>
+                    <span>OPORTUNIDADES PARA VOCÊ</span>
+                    <h2>
+                        Encontre sua próxima <strong>oportunidade</strong>
+                    </h2>
+                    <p>
+                        Vagas que podem combinar com seu perfil.
+                    </p>
+                </div>
+                <a href="#">Ver todas →</a>
+            </div>
+
+            <div class="carrossel-container">
+                <button class="seta esquerda" id="vagaAnterior">
+                    ‹
+                </button>
+                <div class="carrossel" id="carrosselVagas">
+                    <article class="vaga-card">
+                        <div class="empresa-logo">
+                            🏥
+                        </div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">
+                                ESTÁGIO
+                            </span>
+                            <h3>Estágio em Enfermagem</h3>
+                            <p>Hospital São Lucas</p>
+                            <small>
+                                📍 São Paulo, SP
+                            </small>
+                            <div class="vaga-final">
+                                <span>
+                                    R$ 1.200/mês
+                                </span>
+                                <button>Ver vaga →</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">
+                            💻
+                        </div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">
+                                ESTÁGIO
+                            </span>
+                            <h3>Estágio em Tecnologia</h3>
+                            <p>Tech Solutions</p>
+                            <small>
+                                📍 São Paulo, SP
+                            </small>
+                            <div class="vaga-final">
+                                <span>
+                                    R$ 1.500/mês
+                                </span>
+                                <button>Ver vaga →</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="vaga-card">
+                        <div class="empresa-logo">
+                            📊
+                        </div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">
+                                JOVEM APRENDIZ
+                            </span>
+                            <h3>Assistente Administrativo</h3>
+                            <p>Grupo Nova</p>
+                            <small>
+                                📍 Guarulhos, SP
+                            </small>
+                            <div class="vaga-final">
+                                <span>
+                                    R$ 900/mês
+                                </span>
+                                <button>Ver vaga →</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">
+                            📱
+                        </div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">
+                                ESTÁGIO
+                            </span>
+                            <h3>Estágio em Marketing</h3>
+                            <p>Conecta Digital</p>
+                            <small>
+                                📍 São Paulo, SP
+                            </small>
+                            <div class="vaga-final">
+                                <span>
+                                    R$ 1.300/mês
+                                </span>
+                                <button>Ver vaga →</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <button class="seta direita" id="vagaProxima">
+                    ›
+                </button>
+            </div>
+        </section>
+        <!--progresso-->
+        <section class="progresso">
+            <div>
+                <span>SEU DESENVOLVIMENTO</span>
+                <h2>
+                    Você já está <strong>destravando!</strong> 
+                </h2>
+                <p>
+                    Continue aprendendo para chegar cada vez mais perto
+                    dos seus objetivos.
+                </p>
+                <button class="btn-principal">
+                    Continuar aprendendo →
+                </button>
+            </div>
+
+            <div class="progresso-circulo">
+                <div class="circulo">
+                    <div>
+                        <strong>70%</strong>
+                        <span>concluído</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <span>des</span>trava
+        </div>
+        <p>
+            Destrave seu potencial. Construa seu futuro.
+        </p>
+        <div class="footer-links">
+            <a href="#">Sobre nós</a>
+            <a href="#">Contato</a>
+            <a href="#">Privacidade</a>
+        </div>
+    </footer>
 </body>
 </html>
