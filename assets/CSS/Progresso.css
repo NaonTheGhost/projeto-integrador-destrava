@@ -59,9 +59,33 @@ body {
 }
 
 .logo-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 4px;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background-color: #1e293b;
+}
+
+.logo-icon::before,
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--accent-green);
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+}
+
+.logo-icon::before {
+    width: 20px;
+    height: 8px;
+}
+
+.logo-icon::after {
+    width: 8px;
+    height: 20px;
 }
 
 .navbar ul {
