@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/CSS/progresso.css">
+    <link rel="stylesheet" href="../assets/CSS/Progresso.css">
+    <link rel="stylesheet" href="../assets/CSS/header.css">
     <title>Progresso</title>
 </head>
 <body>
-  <header class="header">
-   <div class="logo">
-   <!-- onde vai o logo -->   
-  <div class="logo-icon" aria-hidden="true"></div>
-   <h1>Destrava <span>+</span></h1>
-  </div>
-
-   <Nav class="navbar">
-    <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Minha Carreira</a></li>
-        <li><a href="#">Progresso</a></li>
-    </ul>
-   </Nav>
-
- <div class="user-profile">
-   <span>Olá, Mariana</span>
-   <div class="avatar" role="img" aria-label="Ícone de perfil de Mariana">M</div>
- </div>
- </header>
+  <header class="app-header">
+    <div class="app-header__inner">
+      <a class="app-brand" href="inicio.html">
+        <img src="../assets/img/logo.png" alt="" width="30" height="30">
+        <span>Destrava<b>+</b></span>
+      </a>
+      <nav class="app-nav" aria-label="Navegação principal">
+        <a href="home.html">Início</a>
+        <a href="carreira.html">Minha Carreira</a>
+        <a href="progresso.html" aria-current="page">Progresso</a>
+      </nav>
+      <a class="app-user" href="../index-lc.html" aria-label="Sair da conta de Mariana e voltar para o login" title="Sair e voltar para o login">
+        <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
+        <span class="app-user__avatar" aria-hidden="true">M</span>
+      </a>
+    </div>
+  </header>
 
  <main class="container">
 
@@ -123,6 +121,6 @@
       <a class="btn-advance" href="inicio.html">Avançar Trilha</a>
    </section>
  </main>
-    <script src="assets/JS/script.js"></script>
+    <script src="../assets/JS/script.js"></script>
 </body>
 </html>

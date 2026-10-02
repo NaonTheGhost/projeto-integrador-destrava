@@ -4,7 +4,7 @@
 :root {
     --primary-dark: #0a3d31; /* Verde bem escuro do banner inferior */
     --accent-green: #00c48c; /* Verde vibrante da barra de progresso e botões */
-    --bg-page: #f8f9fa;      /* Fundo da página */
+    --bg-page: #f7fafc;      /* Fundo geral compartilhado pelas páginas */
     --bg-card: #ffffff;      /* Fundo branco dos cards */
     
     --text-main: #1e1e1e;

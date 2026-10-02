@@ -11,24 +11,25 @@
 
   <!-- Todo o visual da página fica neste arquivo -->
   <link rel="stylesheet" href="../assets/CSS/home.css">
+  <link rel="stylesheet" href="../assets/CSS/header.css">
 </head>
 <body>
 
-  <header class="topo">
-    <!-- Logo do sistema -->
-    <a class="logo" href="#"><i>+</i>Destrava <b>+</b></a>
-
-    <!-- Menu principal: a classe "ativo" marca a página atual -->
-    <nav class="menu">
-      <a class="ativo" href="#">Início</a>
-      <a href="carreira.html">Minha Carreira</a>
-      <a href="progresso.html">Progresso</a>
-    </nav>
-
-    <!-- Saudação e avatar do usuário -->
-    <div class="usuario">
-      Olá, <strong>Mariana</strong>
-      <span class="avatar">M</span>
+  <header class="app-header">
+    <div class="app-header__inner">
+      <a class="app-brand" href="inicio.html">
+        <img src="../assets/img/logo.png" alt="" width="30" height="30">
+        <span>Destrava<b>+</b></span>
+      </a>
+      <nav class="app-nav" aria-label="Navegação principal">
+        <a href="home.html" aria-current="page">Início</a>
+        <a href="carreira.html">Minha Carreira</a>
+        <a href="progresso.html">Progresso</a>
+      </nav>
+      <a class="app-user" href="../index-lc.html" aria-label="Sair da conta de Mariana e voltar para o login" title="Sair e voltar para o login">
+        <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
+        <span class="app-user__avatar" aria-hidden="true">M</span>
+      </a>
     </div>
   </header>
 
@@ -40,7 +41,7 @@
         <h1>Olá, Mariana! Bem-vinda de volta.</h1>
         <p class="sub">Seu plano está avançando super bem. Que tal dar mais um passo hoje?</p>
       </div>
-      <a class="btn" href="acao.html">Nova Ação</a>
+      <a class="btn" href="nova-acao.html">Nova Ação</a>
     </div>
 
    

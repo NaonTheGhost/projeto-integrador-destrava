@@ -1,23 +1,6 @@
-/* =====================================================
-   DESTRAVA+ | style.css
-   Este arquivo controla TODO o visual da página.
-   Índice:
-     1. Variáveis (cores)
-     2. Reset e base
-     3. Barra superior
-     4. Cabeçalho da página e botão
-     5. Grade e cards
-     6. Card da profissão + anel de progresso
-     7. Lista de tarefas
-     8. Janela "Nova ação"
-     9. Responsivo (celular)
-   
 
-
-/* ---------- 1. VARIÁVEIS ----------
-paleta do site. Use com var(--nome). */
 :root {
-  --bg: #faf8f4;        /* fundo da página (bege bem claro) */
+  --bg: #f7fafc;        /* fundo geral compartilhado pelas páginas */
   --card: #ffffff;      /* fundo dos cards */
   --ink: #0f1b2d;       /* cor principal do texto */
   --muted: #64748b;     /* texto secundário (cinza azulado) */
@@ -170,12 +153,13 @@ h1 {
 /* ---------- 5. GRADE E CARDS ---------- */
 .grade {
   display: grid;
-  grid-template-columns: 1.1fr 1fr; /* duas colunas; a da esquerda é um pouco maior */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); /* duas colunas; a da esquerda é um pouco maior */
   gap: 16px;
   align-items: start;               /* cada card tem a altura do seu próprio conteúdo */
 }
 
 .card {
+  min-width: 0;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -306,7 +290,10 @@ ul {
   color: #94a3b8;     /* cinza: tarefa ainda não concluída */
 }
 
-.tarefa .nome { flex: 1; } /* o nome ocupa o espaço livre e empurra o selo para a direita */
+.tarefa .texto { flex: 1; min-width: 0; }
+.tarefa .nome { display: block; overflow-wrap: anywhere; }
+.tarefa .meta { display: block; overflow-wrap: anywhere; }
+.tarefa .selo { flex: none; }
 
 /* Tarefa concluída: ícone verde e texto mais apagado */
 .tarefa.concluido .marca { color: var(--verde); }
@@ -418,14 +405,18 @@ dialog input {
    Estas regras só valem quando a tela tiver 760px ou menos (celulares). */
 @media (max-width: 760px) {
   .grade  { grid-template-columns: 1fr; } /* uma coluna: cards um embaixo do outro */
-  .menu   { display: none; }              /* esconde o menu (dá para trocar por um botão hambúrguer) */
-  .topo   { padding: 0 16px; }
   main    { padding: 24px 16px; }
   h1      { font-size: 22px; }
 }
 
 @media (max-width: 480px) {
+  .cabecalho { flex-direction: column; align-items: stretch; }
+  .cabecalho .btn { min-height: 44px; justify-content: center; }
+  .card { padding: 18px; }
+  .profissao { flex-direction: column; align-items: flex-start; }
+  .profissao .anel { align-self: center; }
   .campos-acao { grid-template-columns: 1fr; gap: 9px; }
   .form-acao { padding: 18px; }
-  .acoes-form { flex-wrap: wrap; }
+  .acoes-form { flex-direction: column-reverse; }
+  .acoes-form .btn { min-height: 44px; justify-content: center; }
 }
