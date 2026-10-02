@@ -2,22 +2,22 @@
    VARIÁVEIS DE CORES E ESTILO GLOBAL
    ========================================= */
 :root {
-    --primary-dark: #0a3d31; /* Verde bem escuro do banner inferior */
-    --accent-green: #00c48c; /* Verde vibrante da barra de progresso e botões */
-    --bg-page: #f7fafc;      /* Fundo geral compartilhado pelas páginas */
-    --bg-card: #ffffff;      /* Fundo branco dos cards */
+    --primary-dark: var(--color-brand-dark); /* Verde bem escuro do banner inferior */
+    --accent-green: var(--color-brand); /* Verde vibrante da barra de progresso e botões */
+    --bg-page: var(--color-page);      /* Fundo geral compartilhado pelas páginas */
+    --bg-card: var(--color-surface);      /* Fundo branco dos cards */
     
-    --text-main: #1e1e1e;
-    --text-muted: #828282;
-    --border-color: #eaeaea;
+    --text-main: var(--color-text);
+    --text-muted: var(--color-text-muted);
+    --border-color: var(--color-border);
 
     /* Cores das tags e status */
-    --success-bg: #e6f7eb;
-    --success-text: #198754;
-    --warning-bg: #fdf5df;
-    --warning-text: #e09f00;
-    --pending-bg: #f4f5f7;
-    --pending-text: #6c757d;
+    --success-bg: var(--color-brand-soft);
+    --success-text: var(--color-success);
+    --warning-bg: var(--color-warning-soft);
+    --warning-text: var(--color-warning);
+    --pending-bg: var(--color-pending-soft);
+    --pending-text: var(--color-pending);
 }
 
 * {
@@ -64,7 +64,7 @@ body {
     height: 48px;
     flex-shrink: 0;
     border-radius: 14px;
-    background-color: #1e293b;
+    background-color: var(--color-hero);
 }
 
 .logo-icon::before,
@@ -140,9 +140,9 @@ body {
     display: grid;
     place-items: center;
     box-sizing: border-box;
-    border: 2px solid #35a77b;
-    background-color: #123d38;
-    color: #a2f4d0;
+    border: 2px solid var(--color-brand);
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-light);
     font-weight: 700;
 }
 
@@ -174,7 +174,7 @@ body {
     background-color: var(--bg-card);
     border-radius: 16px;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-progress);
     margin-bottom: 20px;
 }
 
@@ -361,14 +361,14 @@ body {
    ========================================= */
 .motivation-banner {
     background-color: var(--primary-dark);
-    color: #ffffff;
+    color: var(--color-on-brand);
     border-radius: 16px;
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-progress-strong);
 }
 
 .motivation-banner p {
@@ -378,7 +378,7 @@ body {
 
 .btn-advance {
     background-color: var(--accent-green);
-    color: #ffffff;
+    color: var(--color-on-brand);
     border: none;
     padding: 12px 24px;
     border-radius: 8px;
@@ -389,7 +389,7 @@ body {
 }
 
 .btn-advance:hover {
-    background-color: #00a877; /* Verde ligeiramente mais escuro no hover */
+    background-color: var(--color-brand-hover); /* Verde ligeiramente mais escuro no hover */
 }
 
 @media (max-width: 900px) {

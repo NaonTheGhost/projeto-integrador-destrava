@@ -1,4 +1,4 @@
-const CHAVE_TAREFAS = 'destrava-tarefas';
+const CHAVE_TAREFAS = window.Destrava.chave('tarefas');
 const formAcao = document.getElementById('formAcao');
 
 formAcao.addEventListener('submit', function (evento) {

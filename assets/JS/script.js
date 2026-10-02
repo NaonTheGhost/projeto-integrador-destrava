@@ -1,6 +1,6 @@
 (function () {
-	var CHAVE_TAREFAS = "destrava-tarefas";
-	var CHAVE_COMPETENCIAS = "destrava-competencias";
+	var CHAVE_TAREFAS = window.Destrava.chave("tarefas");
+	var CHAVE_COMPETENCIAS = window.Destrava.chave("competencias");
 	var statusPercentual = {
 		"nao-iniciada": 0,
 		"em-andamento": 60,

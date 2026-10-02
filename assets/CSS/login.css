@@ -1,12 +1,12 @@
 :root {
-    --branco: #ffffff;
-    --fundo-pagina: #f7fafc;
-    --texto: #1e293b;
-    --texto-suave: #64748b;
-    --borda: #e5e9ef;
-    --verde: #00e58f;
-    --verde-escuro: #0a9e6e;
-    --erro: #d93c3c;
+    --branco: var(--color-surface);
+    --fundo-pagina: var(--color-page);
+    --texto: var(--color-text);
+    --texto-suave: var(--color-text-muted);
+    --borda: var(--color-border-soft);
+    --verde: var(--color-brand);
+    --verde-escuro: var(--color-brand-dark);
+    --erro: var(--color-error);
 }
 
 * { box-sizing: border-box; }
@@ -73,7 +73,7 @@ em { font-style: normal; color: var(--verde-escuro); }
     border: 1px solid var(--borda);
     border-radius: 18px;
     padding: 28px;
-    box-shadow: 0 12px 32px rgba(30, 41, 59, 0.08);
+    box-shadow: var(--shadow-login);
 }
 
 .bloco h1 {
@@ -119,7 +119,7 @@ label {
     font-size: 14px;
 }
 
-.campo input::placeholder { color: #a3aebc; }
+.campo input::placeholder { color: var(--color-placeholder); }
 
 .campo input:focus {
     outline: 2px solid var(--verde);
@@ -174,12 +174,12 @@ button[type="submit"] {
     border: 0;
     border-radius: 10px;
     background: var(--verde);
-    color: #04281d;
+    color: var(--color-input-text);
     font: inherit;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 229, 143, 0.3);
+    box-shadow: var(--shadow-login-button);
     transition: filter 0.15s, transform 0.15s;
 }
 
@@ -246,7 +246,7 @@ button[type="submit"]:focus-visible {
     cursor: pointer;
 }
 
-.botao-secundario:hover { background: #f6f8fa; }
+.botao-secundario:hover { background: var(--color-surface-soft); }
 
 #conteudo-recuperar-senha {
     width: calc(100% - 40px);

@@ -1,6 +1,6 @@
 .app-header {
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .app-header__inner {
@@ -19,7 +19,7 @@
   flex: none;
   align-items: center;
   gap: 9px;
-  color: #0f1b2d;
+  color: var(--color-text-strong);
   font-size: 17px;
   font-weight: 700;
   text-decoration: none;
@@ -32,7 +32,7 @@
   object-fit: contain;
 }
 
-.app-brand b { color: #0fa678; }
+.app-brand b { color: var(--color-brand); }
 
 .app-nav {
   display: flex;
@@ -46,18 +46,18 @@
   height: 100%;
   align-items: center;
   border-bottom: 2px solid transparent;
-  color: #64748b;
+  color: var(--color-text-muted);
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.app-nav a:hover { color: #0f1b2d; }
+.app-nav a:hover { color: var(--color-text-strong); }
 
 .app-nav a[aria-current="page"] {
-  border-bottom-color: #0fa678;
-  color: #0f1b2d;
+  border-bottom-color: var(--color-brand);
+  color: var(--color-text-strong);
   font-weight: 700;
 }
 
@@ -66,13 +66,13 @@
   flex: none;
   align-items: center;
   gap: 10px;
-  color: #0f1b2d;
+  color: var(--color-text-strong);
   font-size: 12px;
   min-height: 44px;
   text-decoration: none;
 }
 
-.app-user:hover .app-user__greeting { color: #0b7658; }
+.app-user:hover .app-user__greeting { color: var(--color-brand-hover-deep); }
 .app-user:focus-visible { border-radius: 4px; }
 
 .app-user__avatar {
@@ -80,16 +80,16 @@
   width: 30px;
   height: 30px;
   place-items: center;
-  border: 2px solid #0fa678;
+  border: 2px solid var(--color-brand);
   border-radius: 50%;
-  background: #083d2e;
-  color: #fff;
+  background: var(--color-brand-dark);
+  color: var(--color-on-brand);
   font-size: 12px;
   font-weight: 700;
 }
 
 .app-header a:focus-visible {
-  outline: 2px solid #0fa678;
+  outline: 2px solid var(--color-brand);
   outline-offset: 3px;
 }
 

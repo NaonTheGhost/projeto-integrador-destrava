@@ -1,13 +1,13 @@
 
 :root {
-  --bg: #f7fafc;        /* fundo geral compartilhado pelas páginas */
-  --card: #ffffff;      /* fundo dos cards */
-  --ink: #0f1b2d;       /* cor principal do texto */
-  --muted: #64748b;     /* texto secundário (cinza azulado) */
-  --line: #e5e7eb;      /* bordas e divisórias */
-  --verde: #0fa678;     /* verde de destaque */
-  --verde-esc: #083d2e; /* verde escuro (botão e logo) */
-  --trilho: #e2e8f0;    /* cinza do fundo do anel de progresso */
+  --bg: var(--color-page);
+  --card: var(--color-surface);
+  --ink: var(--color-text-strong);
+  --muted: var(--color-text-muted);
+  --line: var(--color-border);
+  --verde: var(--color-brand);
+  --verde-esc: var(--color-brand-dark);
+  --trilho: var(--color-surface-muted);
 }
 
 
@@ -31,7 +31,7 @@ a {
 
 /* ---------- 3. BARRA SUPERIOR ---------- */
 .topo {
-  background: #fff;
+  background: var(--color-surface);
   border-bottom: 1px solid var(--line);
   height: 58px;
   display: flex;                    /* coloca logo, menu e usuário em linha */
@@ -97,7 +97,7 @@ a {
   height: 28px;
   border-radius: 50%; /* 50% transforma o quadrado em círculo */
   background: var(--verde-esc);
-  color: #fff;
+  color: var(--color-on-brand);
   display: grid;
   place-items: center;
   font-weight: 700;
@@ -147,7 +147,7 @@ h1 {
   white-space: nowrap;                   /* impede o texto de quebrar em duas linhas */
 }
 
-.btn:hover { background: #0b5140; }      /* fica um pouco mais claro ao passar o mouse */
+.btn:hover { background: var(--color-brand-hover-dark); } /* fica um pouco mais claro ao passar o mouse */
 
 
 /* ---------- 5. GRADE E CARDS ---------- */
@@ -164,7 +164,7 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 22px;
-  box-shadow: 0 1px 3px rgba(15, 27, 45, 0.05); /* sombra bem sutil */
+  box-shadow: var(--shadow-card); /* sombra bem sutil */
 }
 
 
@@ -272,7 +272,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #faf9f6;
+  background: var(--color-surface-soft);
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 9px 12px;
@@ -287,7 +287,7 @@ ul {
   cursor: pointer;
   display: grid;
   place-items: center;
-  color: #94a3b8;     /* cinza: tarefa ainda não concluída */
+  color: var(--color-text-subtle); /* cinza: tarefa ainda não concluída */
 }
 
 .tarefa .texto { flex: 1; min-width: 0; }
@@ -309,9 +309,9 @@ ul {
   cursor: pointer;
 }
 
-.concluido .selo { background: #d1fae5; color: #047857; } /* verde  */
-.andamento .selo { background: #fef3c7; color: #b45309; } /* amarelo */
-.pendente  .selo { background: #eef0f4; color: #475569; } /* cinza   */
+.concluido .selo { background: var(--color-brand-soft); color: var(--color-success); } /* verde  */
+.andamento .selo { background: var(--color-warning-soft); color: var(--color-warning); } /* amarelo */
+.pendente  .selo { background: var(--color-pending-soft); color: var(--color-pending); } /* cinza   */
 
 
 
@@ -334,7 +334,7 @@ dialog input {
 }
 
 /* Variação clara do botão (usada no "Cancelar") */
-.btn.claro { background: #eef0f4; color: var(--ink); }
+.btn.claro { background: var(--color-pending-soft); color: var(--ink); }
 
 .pagina-acao { max-width: 680px; }
 
@@ -376,7 +376,7 @@ dialog input {
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: #fff;
+  background: var(--color-surface);
   color: var(--ink);
   font: 14px 'DM Sans', sans-serif;
 }
