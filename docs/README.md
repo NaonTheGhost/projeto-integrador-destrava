@@ -21,10 +21,7 @@ HTML, CSS, JavaScript e localStorage
 
 ## Como rodar
 1. Baixe ou clone o repositório
-2. Inicie um servidor local na pasta do projeto (por exemplo, com a extensão Live Server do VS Code)
-3. Abra `index-lc.html` pelo endereço local
-
-O cadastro, as sessões e as atividades ficam salvos neste navegador. As senhas são armazenadas com hash e salt, mas a autenticação é apenas demonstrativa e não substitui um backend para uso em produção.
+2. Abra o index.html no navegador
 
 ## Site no ar
 

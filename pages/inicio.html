@@ -3,12 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Destrava | Seu futuro começa aqui</title>
 
-    <link rel="stylesheet" href="../assets/CSS/tokens.css">
-    <link rel="stylesheet" href="../assets/CSS/inicio.css">
-    <link rel="stylesheet" href="../assets/CSS/header.css">
+    <link rel="stylesheet" href="../assets/css/inicio.css">
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,25 +13,29 @@
         rel="stylesheet">
 </head>
 
-<body data-auth-required="false">
+<body>
 
     <!-- ================= HEADER ================= -->
 
-    <header class="app-header">
-        <div class="app-header__inner">
-            <a class="app-brand" href="home.html">
-                <img src="../assets/img/logo.png" alt="" width="30" height="30">
-                <span>Destrava<b>+</b></span>
-            </a>
-            <nav class="app-nav" aria-label="Navegação principal">
-                <a href="home.html">Início</a>
-                <a href="carreira.html">Minha Carreira</a>
-                <a href="progresso.html">Progresso</a>
-            </nav>
-            <a class="app-user" href="../index-lc.html" aria-label="Sair da conta de Mariana e voltar para o login" title="Sair e voltar para o login">
-                <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
-                <span class="app-user__avatar" aria-hidden="true">M</span>
-            </a>
+    <header class="header">
+        <div class="logo">
+            <span>des</span>trava
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="ativo">Início</a>
+            <a href="#">Minha Carreira</a>
+            <a href="#">Cursos</a>
+            <a href="#">Vagas</a>
+        </nav>
+
+        <div class="usuario">
+            <button class="notificacao">🔔</button>
+            <div class="perfil">
+                <div class="avatar">M</div>
+                <span>Marina</span>
+            </div>
+
         </div>
 
     </header>
@@ -378,6 +379,5 @@
             <a href="#">Privacidade</a>
         </div>
     </footer>
-    <script src="../assets/JS/app.js"></script>
 </body>
 </html>

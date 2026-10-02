@@ -29,7 +29,7 @@ const TAREFAS_INICIAIS = [
   { nome: 'Revisar estatística básica',         estado: 2 },
   { nome: 'Praticar consultas em SQL',          estado: 0 }
 ];
-const CHAVE_TAREFAS = window.Destrava.chave('tarefas');
+const CHAVE_TAREFAS = 'destrava-tarefas';
 
 function carregarTarefas() {
   try {
