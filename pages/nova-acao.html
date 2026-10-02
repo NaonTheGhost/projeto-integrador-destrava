@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Destrava+ | Nova Ação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/CSS/home.css">
+</head>
+<body>
+    <header class="topo">
+        <a class="logo" href="home.html"><i>+</i>Destrava <b>+</b></a>
+        <nav class="menu">
+            <a href="home.html">Início</a>
+            <a href="carreira.html">Minha Carreira</a>
+            <a href="progresso.html">Progresso</a>
+        </nav>
+        <div class="usuario">Olá, <strong>Mariana</strong><span class="avatar">M</span></div>
+    </header>
+
+    <main class="pagina-acao">
+        <a class="voltar" href="home.html">← Voltar para início</a>
+        <h1>Nova ação</h1>
+        <p class="sub">Adicione uma tarefa ao seu plano de desenvolvimento.</p>
+        <form class="form-acao" id="formAcao">
+            <label for="titulo">Título da ação</label>
+            <input id="titulo" name="titulo" placeholder="Ex.: Estudar estatística" required autocomplete="off" maxlength="100">
+            <label for="descricao">Descrição <span>(opcional)</span></label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="O que você pretende desenvolver?"></textarea>
+            <div class="campos-acao">
+                <div>
+                    <label for="prazo">Prazo <span>(opcional)</span></label>
+                    <input id="prazo" name="prazo" type="date">
+                </div>
+                <div>
+                    <label for="prioridade">Prioridade</label>
+                    <select id="prioridade" name="prioridade">
+                        <option value="baixa">Baixa</option>
+                        <option value="media" selected>Média</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </div>
+            </div>
+            <div class="acoes-form">
+                <a class="btn claro" href="home.html">Cancelar</a>
+                <button class="btn" type="submit">Adicionar ação</button>
+            </div>
+        </form>
+    </main>
+    <script src="../assets/JS/acao.js"></script>
+</body>
+</html>

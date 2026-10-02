@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destrava+ | Início</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Todo o visual da página fica neste arquivo -->
+  <link rel="stylesheet" href="../assets/CSS/home.css">
+</head>
+<body>
+
+  <header class="topo">
+    <!-- Logo do sistema -->
+    <a class="logo" href="#"><i>+</i>Destrava <b>+</b></a>
+
+    <!-- Menu principal: a classe "ativo" marca a página atual -->
+    <nav class="menu">
+      <a class="ativo" href="#">Início</a>
+      <a href="carreira.html">Minha Carreira</a>
+      <a href="progresso.html">Progresso</a>
+    </nav>
+
+    <!-- Saudação e avatar do usuário -->
+    <div class="usuario">
+      Olá, <strong>Mariana</strong>
+      <span class="avatar">M</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Título de boas-vindas + botão de nova ação -->
+    <div class="cabecalho">
+      <div>
+        <h1>Olá, Mariana! Bem-vinda de volta.</h1>
+        <p class="sub">Seu plano está avançando super bem. Que tal dar mais um passo hoje?</p>
+      </div>
+      <a class="btn" href="acao.html">Nova Ação</a>
+    </div>
+
+   
+    <div class="grade">
+
+      <!-- CARD 1: profissão objetivo e anel de progresso -->
+      <section class="card profissao">
+        <div>
+          <span class="rotulo">PROFISSÃO OBJETIVO</span>
+          <h2>Ciência de Dados e IA</h2>
+          <p>Mapeamento ativo das competências de engenharia de dados, visualização matemática e algoritmos avançados.</p>
+          <a class="trilha" href="#">Acessar trilha completa →</a>
+        </div>
+
+        <!-- Anel de porcentagem. -->
+        <div class="anel" id="anel" role="img" aria-label="Progresso">
+          <svg width="110" height="110" viewBox="0 0 110 110">
+            <circle class="fundo" cx="55" cy="55" r="48"/>
+            <circle class="valor" id="valor" cx="55" cy="55" r="48"/>
+          </svg>
+          <div class="pct">
+            <strong id="pct">0%</strong>
+            <span>CONCLUÍDO</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 2: lista de tarefas -->
+      <section class="card">
+        <div class="tarefas-topo">
+          <h2>Tarefas prioritárias</h2>
+          <!-- O texto deste botão é escrito pelo JS: "Ver todas (5)" ou "Ver menos" -->
+          <button id="verTodas"></button>
+        </div>
+        <!-- As tarefas (<li>) são criadas pelo JavaScript dentro desta lista -->
+        <ul id="lista"></ul>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- O JavaScript vem por último, para o HTML já existir quando ele rodar -->
+  <script src="../assets/JS/home.js"></script>
+</body>
+</html>
