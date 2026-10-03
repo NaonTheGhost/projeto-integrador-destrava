@@ -1,0 +1,583 @@
+/* =========================================
+   VARIÁVEIS DE CORES E ESTILO GLOBAL
+   ========================================= */
+:root {
+    --primary-dark: var(--color-brand-dark); /* Verde bem escuro do banner inferior */
+    --accent-green: var(--color-brand); /* Verde vibrante da barra de progresso e botões */
+    --bg-page: var(--color-page);      /* Fundo geral compartilhado pelas páginas */
+    --bg-card: var(--color-surface);      /* Fundo branco dos cards */
+    
+    --text-main: var(--color-text);
+    --text-muted: var(--color-text-muted);
+    --border-color: var(--color-border);
+
+    /* Cores das tags e status */
+    --success-bg: var(--color-brand-soft);
+    --success-text: var(--color-success);
+    --warning-bg: var(--color-warning-soft);
+    --warning-text: var(--color-warning);
+    --pending-bg: var(--color-pending-soft);
+    --pending-text: var(--color-pending);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    padding-bottom: 50px;
+}
+
+/* =========================================
+   CABEÇALHO (HEADER E NAVBAR)
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.logo span {
+    color: var(--accent-green); /* O "+" verde no logo */
+}
+
+.logo-icon {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background-color: var(--color-hero);
+}
+
+.logo-icon::before,
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--accent-green);
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+}
+
+.logo-icon::before {
+    width: 20px;
+    height: 8px;
+}
+
+.logo-icon::after {
+    width: 8px;
+    height: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 20px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--text-main);
+}
+
+.navbar a.active {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Linha verde abaixo do link ativo */
+.navbar a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-green);
+    border-radius: 3px 3px 0 0;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    border: 2px solid var(--color-brand);
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-light);
+    font-weight: 700;
+}
+
+/* =========================================
+   CONTEÚDO PRINCIPAL (MAIN)
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   ESTILO GERAL DOS CARDS
+   ========================================= */
+.card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow-progress);
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   SEÇÃO DE RESUMO (Cards Superiores)
+   ========================================= */
+.summary-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.progress-card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.details-card {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Gráfico Circular de Progresso */
+.circular-progress {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    /* Desenha o gráfico circular com CSS: 40% verde, o resto cinza */
+    background: conic-gradient(var(--accent-green) 40%, var(--pending-bg) 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Círculo branco de dentro */
+.circle-content {
+    width: 85px;
+    height: 85px;
+    background-color: var(--bg-card);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.progress-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.progress-text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Badges (2 Concluídas, 1 Em Andamento...) */
+.details-badges {
+    display: flex;
+    gap: 15px;
+}
+
+.badge {
+    flex: 1;
+    padding: 20px 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.badge strong {
+    font-size: 1.05rem;
+}
+
+.badge span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Cores específicas das badges */
+.status-success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+.status-warning {
+    background-color: var(--warning-bg);
+    color: var(--warning-text);
+}
+
+.status-pending {
+    background-color: var(--pending-bg);
+    color: var(--pending-text);
+}
+
+/* =========================================
+   HISTÓRICO DE ATIVIDADES
+   ========================================= */
+.history-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.activity-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaço entre os itens da lista */
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border: 1px solid var(--border-color); /* Bordinha leve igual na imagem */
+    border-radius: 12px;
+}
+
+.activity-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Pontinhos coloridos */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot.success { background-color: var(--success-text); }
+.dot.warning { background-color: var(--warning-text); }
+.dot.pending { background-color: var(--pending-text); }
+
+.activity-text h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.activity-text .date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Tags pequenas de status na direita */
+.status-tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.status-tag.success { background-color: var(--success-bg); color: var(--success-text); }
+.status-tag.warning { background-color: var(--warning-bg); color: var(--warning-text); }
+.status-tag.pending { background-color: var(--pending-bg); color: var(--pending-text); }
+
+/* =========================================
+   BANNER INFERIOR MOTIVACIONAL
+   ========================================= */
+.motivation-banner {
+    background-color: var(--primary-dark);
+    color: var(--color-on-brand);
+    border-radius: 16px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    box-shadow: var(--shadow-progress-strong);
+}
+
+.motivation-banner p {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.btn-advance {
+    background-color: var(--accent-green);
+    color: var(--color-on-brand);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-advance:hover {
+    background-color: var(--color-brand-hover); /* Verde ligeiramente mais escuro no hover */
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        padding: 14px 24px;
+    }
+
+    .logo h1 {
+        font-size: inherit;
+    }
+
+    .navbar {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .navbar a {
+        display: inline-block;
+        padding: 8px 0;
+    }
+
+    .navbar a.active::after {
+        bottom: 0;
+    }
+
+    .container {
+        padding: 32px 24px;
+    }
+
+    .summary-cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 24px;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px 16px;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        min-width: 0;
+        font-size: 1.1rem;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+    }
+
+    .logo-icon::before {
+        width: 16px;
+        height: 6px;
+    }
+
+    .logo-icon::after {
+        width: 6px;
+        height: 16px;
+    }
+
+    .user-profile {
+        gap: 8px;
+        font-size: 0.8rem;
+    }
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navbar {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .navbar ul {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 0.82rem;
+        white-space: nowrap;
+    }
+
+    .container {
+        padding: 28px 16px;
+    }
+
+    .page-header h2 {
+        font-size: 1.65rem;
+    }
+
+    .page-header p {
+        margin-bottom: 22px;
+        line-height: 1.5;
+    }
+
+    .card {
+        padding: 22px 18px;
+        border-radius: 12px;
+    }
+
+    .progress-card {
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .details-badges {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .badge {
+        padding: 14px;
+    }
+
+    .activity-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .activity-info,
+    .activity-text {
+        min-width: 0;
+    }
+
+    .activity-text h4 {
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .status-tag {
+        align-self: flex-start;
+    }
+
+    .motivation-banner {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 22px;
+        padding: 20px;
+    }
+
+    .btn-advance {
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .user-profile {
+        justify-self: end;
+    }
+
+    .navbar {
+        grid-column: 1;
+    }
+
+    .navbar ul {
+        gap: 8px;
+    }
+
+    .navbar a {
+        font-size: 0.76rem;
+    }
+
+    .progress-card {
+        flex-direction: column;
+    }
+}

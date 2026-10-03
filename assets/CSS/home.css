@@ -1,0 +1,422 @@
+
+:root {
+  --bg: var(--color-page);
+  --card: var(--color-surface);
+  --ink: var(--color-text-strong);
+  --muted: var(--color-text-muted);
+  --line: var(--color-border);
+  --verde: var(--color-brand);
+  --verde-esc: var(--color-brand-dark);
+  --trilho: var(--color-surface-muted);
+}
+
+
+/* ---------- 2. RESET E BASE ---------- */
+* {
+  box-sizing: border-box; 
+  margin: 0; 
+  }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif; /* se a fonte falhar, usa a do sistema */
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh; /* fundo cobre a tela inteira, mesmo com pouco conteúdo */
+}
+
+a {
+  color: inherit;         
+  text-decoration: none;  
+}
+
+/* ---------- 3. BARRA SUPERIOR ---------- */
+.topo {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--line);
+  height: 58px;
+  display: flex;                    /* coloca logo, menu e usuário em linha */
+  align-items: center;              /* centraliza na vertical */
+  justify-content: space-between;   /* um em cada ponta, menu no meio */
+  padding: 0 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;              /* espaço entre o ícone e o texto */
+  font-weight: 700;
+  font-size: 17px;
+}
+
+/* Quadradinho verde escuro com o "+" */
+.logo i {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--verde-esc);
+  color: var(--verde);
+  display: grid;
+  place-items: center;    /* centraliza o "+" dentro do quadrado */
+  font-style: normal;     /* tira o itálico padrão da tag <i> */
+  font-size: 14px;
+}
+
+.logo b { color: var(--verde); } /* o "+" depois de Destrava */
+
+.menu {
+  display: flex;
+  gap: 32px;
+  height: 100%; /* ocupa a altura toda para a linha verde ficar colada embaixo */
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+  border-bottom: 2px solid transparent; /* linha invisível, só reserva o espaço */
+}
+
+/* Página atual: texto escuro, negrito e linha verde embaixo */
+.menu a.ativo {
+  color: var(--ink);
+  font-weight: 700;
+  border-color: var(--verde);
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+/* Bolinha do avatar (com a inicial da usuária) */
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%; /* 50% transforma o quadrado em círculo */
+  background: var(--verde-esc);
+  color: var(--color-on-brand);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 0 0 0 2px var(--verde); /* anel verde ao redor */
+}
+
+
+/* ---------- 4. CABEÇALHO DA PÁGINA E BOTÃO ---------- */
+main {
+  max-width: 1000px;  /* não deixa o conteúdo ficar largo demais */
+  margin: 0 auto;     /* centraliza na tela */
+  padding: 36px 32px;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between; /* título à esquerda, botão à direita */
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 26px;
+  letter-spacing: -0.5px; /* aproxima um pouco as letras: fica mais elegante */
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Botão principal (verde escuro). A classe .btn é reaproveitada na janela também */
+.btn {
+  background: var(--verde-esc);
+  color: var(--verde);
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font: 700 13px 'DM Sans', sans-serif; /* botões não herdam a fonte sozinhos */
+  cursor: pointer;                       /* mãozinha ao passar o mouse */
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;                   /* impede o texto de quebrar em duas linhas */
+}
+
+.btn:hover { background: var(--color-brand-hover-dark); } /* fica um pouco mais claro ao passar o mouse */
+
+
+/* ---------- 5. GRADE E CARDS ---------- */
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); /* duas colunas; a da esquerda é um pouco maior */
+  gap: 16px;
+  align-items: start;               /* cada card tem a altura do seu próprio conteúdo */
+}
+
+.card {
+  min-width: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow-card); /* sombra bem sutil */
+}
+
+
+/* ---------- 6. CARD DA PROFISSÃO + ANEL DE PROGRESSO ---------- */
+.profissao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.rotulo {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--verde);
+  letter-spacing: 0.3px;
+}
+
+.profissao h2 { font-size: 22px; margin: 6px 0 14px; }
+
+.profissao p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;   /* espaço entre linhas: facilita a leitura */
+  max-width: 270px;
+}
+
+.trilha {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+/* Caixa que guarda o anel e o texto central */
+.anel {
+  position: relative; /* permite posicionar o texto por cima do desenho */
+  width: 110px;
+  height: 110px;
+  flex: none;         /* não deixa o anel encolher */
+}
+
+/* Gira o desenho -90° para o progresso começar no TOPO (o padrão é na direita) */
+.anel svg { transform: rotate(-90deg); }
+
+.anel circle {
+  fill: none;         /* só o contorno, sem preenchimento */
+  stroke-width: 9;    /* espessura do anel */
+}
+
+.anel .fundo { stroke: var(--trilho); }
+
+/* Parte verde: o JS controla o quanto dela aparece (stroke-dashoffset).
+   A "transition" faz o anel crescer suavemente em vez de pular. */
+.anel .valor {
+  stroke: var(--verde);
+  stroke-linecap: round; /* pontas arredondadas */
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+/* Texto central: "inset: 0" estica a caixa sobre o anel inteiro */
+.anel div {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.anel strong { font-size: 22px; }
+.anel span   { font-size: 8px; color: var(--muted); letter-spacing: 0.5px; }
+
+
+/* ---------- 7. LISTA DE TAREFAS ---------- */
+.tarefas-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 14px;
+}
+
+.tarefas-topo h2 { font-size: 16px; }
+
+/* Botão de texto "Ver todas" */
+.tarefas-topo button {
+  background: none;
+  border: 0;
+  font: 700 11px 'DM Sans', sans-serif;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;  /* tira as bolinhas da lista */
+  padding: 0;
+  display: grid;
+  gap: 8px;          /* espaço entre uma tarefa e outra */
+}
+
+/* Cada linha de tarefa */
+.tarefa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 12px;
+}
+
+/* Botão do ícone (círculo com check) */
+.tarefa button.marca {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: var(--color-text-subtle); /* cinza: tarefa ainda não concluída */
+}
+
+.tarefa .texto { flex: 1; min-width: 0; }
+.tarefa .nome { display: block; overflow-wrap: anywhere; }
+.tarefa .meta { display: block; overflow-wrap: anywhere; }
+.tarefa .selo { flex: none; }
+
+/* Tarefa concluída: ícone verde e texto mais apagado */
+.tarefa.concluido .marca { color: var(--verde); }
+.tarefa.concluido .nome  { color: var(--muted); }
+
+/* Selo de status (a cor depende da classe da linha: concluido, andamento ou pendente) */
+.selo {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;  /* formato de pílula */
+  border: 0;
+  cursor: pointer;
+}
+
+.concluido .selo { background: var(--color-brand-soft); color: var(--color-success); } /* verde  */
+.andamento .selo { background: var(--color-warning-soft); color: var(--color-warning); } /* amarelo */
+.pendente  .selo { background: var(--color-pending-soft); color: var(--color-pending); } /* cinza   */
+
+
+
+
+dialog h3 { margin-bottom: 14px; }
+
+dialog input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: 14px 'DM Sans', sans-serif;
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Variação clara do botão (usada no "Cancelar") */
+.btn.claro { background: var(--color-pending-soft); color: var(--ink); }
+
+.pagina-acao { max-width: 680px; }
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--verde-esc);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pagina-acao h1 { font-size: 26px; }
+
+.form-acao {
+  display: grid;
+  gap: 9px;
+  margin-top: 26px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.form-acao label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-acao label span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.form-acao input,
+.form-acao textarea,
+.form-acao select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--ink);
+  font: 14px 'DM Sans', sans-serif;
+}
+
+.form-acao textarea { resize: vertical; }
+
+.campos-acao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.campos-acao > div { display: grid; gap: 9px; }
+
+.acoes-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.acoes-form .btn { text-decoration: none; }
+
+
+/* ---------- 9. RESPONSIVO ----------
+   Estas regras só valem quando a tela tiver 760px ou menos (celulares). */
+@media (max-width: 760px) {
+  .grade  { grid-template-columns: 1fr; } /* uma coluna: cards um embaixo do outro */
+  main    { padding: 24px 16px; }
+  h1      { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .cabecalho { flex-direction: column; align-items: stretch; }
+  .cabecalho .btn { min-height: 44px; justify-content: center; }
+  .card { padding: 18px; }
+  .profissao { flex-direction: column; align-items: flex-start; }
+  .profissao .anel { align-self: center; }
+  .campos-acao { grid-template-columns: 1fr; gap: 9px; }
+  .form-acao { padding: 18px; }
+  .acoes-form { flex-direction: column-reverse; }
+  .acoes-form .btn { min-height: 44px; justify-content: center; }
+}
