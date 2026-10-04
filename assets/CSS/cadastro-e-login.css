@@ -1,4 +1,65 @@
 :root {
+  --color-page: #f7fafc;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f1f5f9;
+  --color-surface-muted: #e2e8f0;
+  --color-text: #1e293b;
+  --color-text-strong: #0f1b2d;
+  --color-text-muted: #64748b;
+  --color-text-subtle: #94a3b8;
+  --color-border: #e5e7eb;
+  --color-border-soft: #e5e9ef;
+  --color-border-strong: #cbd5e1;
+  --color-brand: #10b981;
+  --color-brand-dark: #083d2e;
+  --color-brand-hover: #0d9488;
+  --color-brand-hover-dark: #0b5140;
+  --color-brand-hover-deep: #0b7658;
+  --color-hero: #1e293b;
+  --color-hero-deep: #033d30;
+  --color-hero-mid: #05503f;
+  --color-on-brand: #ffffff;
+  --color-on-hero-muted: #cbd5e1;
+  --color-brand-soft: #d1fae5;
+  --color-blue-soft: #dbeafe;
+  --color-orange-soft: #ffedd5;
+  --color-teal-soft: #ccfbf1;
+  --color-opportunity-soft: #eefdf8;
+  --color-success: #047857;
+  --color-warning-soft: #fef3c7;
+  --color-warning: #b45309;
+  --color-pending-soft: #eef0f4;
+  --color-pending: #475569;
+  --color-error: #d93c3c;
+  --color-placeholder: #a3aebc;
+  --color-input-text: #04281d;
+  --color-footer: #111827;
+  --color-hero-track: #334155;
+  --color-brand-light: #a7f3d0;
+  --color-brand-bright: #6ee7b7;
+  --color-brand-muted: #b7e4d4;
+  --color-brand-tint: rgba(16, 185, 129, 0.15);
+  --color-brand-tint-strong: rgba(16, 185, 129, 0.18);
+  --color-white-overlay-10: rgba(255, 255, 255, 0.1);
+  --color-white-overlay-12: rgba(255, 255, 255, 0.12);
+  --color-white-overlay-22: rgba(255, 255, 255, 0.22);
+  --color-white-overlay-40: rgba(255, 255, 255, 0.4);
+  --color-white-overlay-80: rgba(255, 255, 255, 0.8);
+  --shadow-floating: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 1px 3px rgba(15, 31, 46, 0.04);
+  --shadow-card-hover: 0 15px 30px rgba(0, 0, 0, 0.1);
+  --shadow-objective: 0 15px 30px rgba(0, 0, 0, 0.1);
+  --shadow-course: 0 5px 20px rgba(0, 0, 0, 0.07);
+  --shadow-course-hover: 0 15px 30px rgba(0, 0, 0, 0.12);
+  --shadow-arrow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --shadow-opportunity: 0 5px 20px rgba(0, 0, 0, 0.06);
+  --shadow-login: 0 12px 32px rgba(30, 41, 59, 0.08);
+  --shadow-login-button: 0 6px 16px rgba(16, 185, 129, 0.3);
+  --shadow-progress: 0 4px 15px rgba(0, 0, 0, 0.03);
+  --shadow-progress-strong: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+:root {
     --branco: var(--color-surface);
     --fundo-pagina: var(--color-page);
     --texto: var(--color-text);
@@ -283,3 +344,9 @@ button[type="submit"]:focus-visible {
     .bloco { padding: 22px 18px; border-radius: 14px; }
     .linha-label { align-items: flex-start; flex-wrap: wrap; gap: 6px 12px; }
 }
+
+a{
+    text-decoration: none;
+    color: var(--color-brand);
+}
+

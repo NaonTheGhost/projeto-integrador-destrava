@@ -1,12 +1,11 @@
-        
-        :root {
-          --fundo: var(--color-page);
-          --branco: var(--color-surface);
-          --borda: var(--color-border);
-          --titulo: var(--color-text-strong);
-          --texto: var(--color-text-muted);
-          --verde: var(--color-brand);
-          --verde-escuro: var(--color-brand-dark);
+ :root {
+          --fundo: #faf8f4;
+          --branco: #ffffff;
+          --borda: #ebe8e1;
+          --titulo: #0f1f2e;
+          --texto: #64748b;
+          --verde: #0f9d7a;
+          --verde-escuro: #064e3b;
           --fonte: "Plus Jakarta Sans", system-ui, sans-serif;
         }
 
@@ -61,10 +60,10 @@
           place-items: center;
           border-radius: 50%;
           background: var(--verde-escuro);
-          color: var(--color-brand-light);
+          color: #a7f3d0;
           font-size: 13px;
           font-weight: 700;
-          box-shadow: 0 0 0 2px var(--color-brand-light);
+          box-shadow: 0 0 0 2px #a7f3d0;
         }
 
         
@@ -82,8 +81,8 @@
           gap: 18px;
           margin-top: 28px;
           padding: 24px 28px;
-          color: var(--color-on-brand);
-          background: linear-gradient(100deg, var(--color-hero-deep) 0%, var(--color-hero-mid) 100%);
+          color: #fff;
+          background: linear-gradient(100deg, #033d30 0%, #05503f 100%);
           border-radius: 14px;
         }
         /* círculo decorativo à direita */
@@ -95,7 +94,7 @@
           width: 150px;
           height: 150px;
           border-radius: 50%;
-          background: var(--color-brand-tint-strong);
+          background: rgba(16, 185, 129, .18);
         }
         .objetivo__icone {
           position: relative;
@@ -106,12 +105,12 @@
           display: grid;
           place-items: center;
           border-radius: 10px;
-          background: var(--color-white-overlay-10);
-          color: var(--color-brand-bright);
+          background: rgba(255, 255, 255, .1);
+          color: #6ee7b7;
         }
         .objetivo__texto { position: relative; z-index: 1; flex: 1; max-width: 640px; }
         .objetivo__texto h2 { font-size: 17px; font-weight: 700; }
-        .objetivo__texto p { font-size: 11px; line-height: 1.6; color: var(--color-brand-muted); margin-top: 4px; }
+        .objetivo__texto p { font-size: 11px; line-height: 1.6; color: #b7e4d4; margin-top: 4px; }
 
         
         [hidden] { display: none !important; }
@@ -121,16 +120,16 @@
           z-index: 1;
           flex-shrink: 0;
           font: 700 11px var(--fonte);
-          color: var(--color-on-brand);
-          background: var(--color-white-overlay-12);
-          border: 1px solid var(--color-white-overlay-40);
+          color: #fff;
+          background: rgba(255, 255, 255, .12);
+          border: 1px solid rgba(255, 255, 255, .4);
           border-radius: 999px;
           padding: 9px 16px;
           cursor: pointer;
           transition: background .15s;
         }
-        .botao-claro:hover { background: var(--color-white-overlay-22); }
-        .botao-claro:focus-visible { outline-color: var(--color-on-brand); }
+        .botao-claro:hover { background: rgba(255, 255, 255, .22); }
+        .botao-claro:focus-visible { outline-color: #fff; }
 
         .form-objetivo {
           display: grid;
@@ -140,7 +139,7 @@
           background: var(--branco);
           border: 1px solid var(--borda);
           border-radius: 12px;
-          box-shadow: var(--shadow-card);
+          box-shadow: 0 1px 3px rgba(15, 31, 46, .04);
         }
         .form-objetivo h3 { font-size: 14px; font-weight: 800; margin-bottom: 4px; }
         .form-objetivo label { font-size: 11px; font-weight: 700; margin-top: 6px; }
@@ -152,9 +151,9 @@
           font: 500 13px var(--fonte);
           color: var(--titulo);
           padding: 10px 12px;
-          border: 1px solid var(--color-border-strong);
+          border: 1px solid #d9d5cc;
           border-radius: 8px;
-          background: var(--color-surface);
+          background: #fff;
           resize: vertical;
         }
         .form-objetivo input:focus,
@@ -168,10 +167,10 @@
           border-radius: 8px;
           cursor: pointer;
         }
-        .botao-principal { color: var(--color-on-brand); background: var(--verde); border: 1px solid var(--verde); }
-        .botao-principal:hover { background: var(--color-brand-hover); }
-        .botao-secundario { color: var(--titulo); background: transparent; border: 1px solid var(--color-border-strong); }
-        .botao-secundario:hover { background: var(--color-surface-soft); }
+        .botao-principal { color: #fff; background: var(--verde); border: 1px solid var(--verde); }
+        .botao-principal:hover { background: #0b8767; }
+        .botao-secundario { color: var(--titulo); background: transparent; border: 1px solid #d9d5cc; }
+        .botao-secundario:hover { background: #f3f0ea; }
 
        
         .trilha { margin-top: 36px; }
@@ -184,7 +183,7 @@
           background: var(--branco);
           border: 1px solid var(--borda);
           border-radius: 12px;
-          box-shadow: var(--shadow-card);
+          box-shadow: 0 1px 3px rgba(15, 31, 46, .04);
         }
 
         .card__topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
@@ -207,13 +206,13 @@
           border-radius: 999px;
           cursor: pointer;
           text-align: center;
-          background: var(--color-surface-soft);
-          color: var(--color-text-muted);
+          background: #eef2f6;
+          color: #64748b;
         }
-        .card[data-status="em-andamento"] .card__status { background: var(--color-warning-soft); color: var(--color-warning); }
-        .card[data-status="desenvolvida"] .card__status { background: var(--color-brand-soft); color: var(--color-success); }
+        .card[data-status="em-andamento"] .card__status { background: #fef3c7; color: #b45309; }
+        .card[data-status="desenvolvida"] .card__status { background: #d1fae5; color: #047857; }
 
-        .barra { height: 4px; margin-top: 12px; background: var(--color-surface-soft); border-radius: 999px; overflow: hidden; }
+        .barra { height: 4px; margin-top: 12px; background: #eef2f6; border-radius: 999px; overflow: hidden; }
         .barra__preenchida { height: 100%; width: 0; background: var(--verde); border-radius: 999px; transition: width .3s; }
         .card[data-status="em-andamento"] .barra__preenchida { width: 60%; }
         .card[data-status="desenvolvida"] .barra__preenchida { width: 100%; }
