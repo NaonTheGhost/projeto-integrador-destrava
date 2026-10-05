@@ -22,5 +22,5 @@ formAcao.addEventListener('submit', function (evento) {
   });
 
   localStorage.setItem(CHAVE_TAREFAS, JSON.stringify(tarefas));
-  window.location.href = 'home.html';
+  window.location.href = 'painel.html';
 });

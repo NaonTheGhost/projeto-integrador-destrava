@@ -27,6 +27,7 @@ HTML, CSS, JavaScript e localStorage
 
 
 ## Documentação
+- [Guia dos arquivos e funcionalidades](estrutura-do-projeto.md)
 - [Requisitos](docs/requisitos.md)
 - [Backlog](docs/backlog.md)
 - [Protótipos](docs/prototipos/)

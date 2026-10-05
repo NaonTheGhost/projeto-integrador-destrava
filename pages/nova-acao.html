@@ -7,21 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/CSS/home.css">
+    <link rel="stylesheet" href="../assets/CSS/tokens.css">
+    <link rel="stylesheet" href="../assets/CSS/painel.css">
+    <link rel="stylesheet" href="../assets/CSS/header.css">
 </head>
-<body>
-    <header class="topo">
-        <a class="logo" href="home.html"><i>+</i>Destrava <b>+</b></a>
-        <nav class="menu">
-            <a href="home.html">Início</a>
-            <a href="carreira.html">Minha Carreira</a>
-            <a href="progresso.html">Progresso</a>
-        </nav>
-        <div class="usuario">Olá, <strong>Mariana</strong><span class="avatar">M</span></div>
+<body data-auth-required="false">
+    <header class="app-header">
+        <div class="app-header__inner">
+            <a class="app-brand" href="inicio.html">
+                <img src="../assets/img/logo.png" alt="" width="30" height="30">
+                <span>Destrava<b>+</b></span>
+            </a>
+            <nav class="app-nav" aria-label="Navegação principal">
+                <a href="inicio.html">Início</a>
+                <a href="painel.html">Painel</a>
+                <a href="carreira.html">Minha Carreira</a>
+                <a href="progresso.html">Progresso</a>
+            </nav>
+            <a class="app-user" href="../index.html" aria-label="Sair da conta de Mariana e voltar para o login" title="Sair e voltar para o login">
+                <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
+                <span class="app-user__avatar" aria-hidden="true">M</span>
+            </a>
+        </div>
     </header>
 
     <main class="pagina-acao">
-        <a class="voltar" href="home.html">← Voltar para início</a>
+        <a class="voltar" href="inicio.html">← Voltar para início</a>
         <h1>Nova ação</h1>
         <p class="sub">Adicione uma tarefa ao seu plano de desenvolvimento.</p>
         <form class="form-acao" id="formAcao">
@@ -44,11 +55,12 @@
                 </div>
             </div>
             <div class="acoes-form">
-                <a class="btn claro" href="home.html">Cancelar</a>
+                <a class="btn claro" href="inicio.html">Cancelar</a>
                 <button class="btn" type="submit">Adicionar ação</button>
             </div>
         </form>
     </main>
+    <script src="../assets/JS/app.js"></script>
     <script src="../assets/JS/acao.js"></script>
 </body>
 </html>

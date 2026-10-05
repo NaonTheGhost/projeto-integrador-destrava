@@ -1,16 +1,4 @@
 
-:root {
-  --bg: var(--color-page);
-  --card: var(--color-surface);
-  --ink: var(--color-text-strong);
-  --muted: var(--color-text-muted);
-  --line: var(--color-border);
-  --verde: var(--color-brand);
-  --verde-esc: var(--color-brand-dark);
-  --trilho: var(--color-surface-muted);
-}
-
-
 /* ---------- 2. RESET E BASE ---------- */
 * {
   box-sizing: border-box; 
@@ -19,8 +7,8 @@
 
 body {
   font-family: 'DM Sans', system-ui, sans-serif; /* se a fonte falhar, usa a do sistema */
-  background: var(--bg);
-  color: var(--ink);
+  background: var(--color-page);
+  color: var(--color-text-strong);
   min-height: 100vh; /* fundo cobre a tela inteira, mesmo com pouco conteúdo */
 }
 
@@ -32,7 +20,7 @@ a {
 /* ---------- 3. BARRA SUPERIOR ---------- */
 .topo {
   background: var(--color-surface);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--color-border);
   height: 58px;
   display: flex;                    /* coloca logo, menu e usuário em linha */
   align-items: center;              /* centraliza na vertical */
@@ -53,15 +41,15 @@ a {
   width: 22px;
   height: 22px;
   border-radius: 6px;
-  background: var(--verde-esc);
-  color: var(--verde);
+  background: var(--color-brand-dark);
+  color: var(--color-brand);
   display: grid;
   place-items: center;    /* centraliza o "+" dentro do quadrado */
   font-style: normal;     /* tira o itálico padrão da tag <i> */
   font-size: 14px;
 }
 
-.logo b { color: var(--verde); } /* o "+" depois de Destrava */
+.logo b { color: var(--color-brand); } /* o "+" depois de Destrava */
 
 .menu {
   display: flex;
@@ -73,15 +61,15 @@ a {
   display: flex;
   align-items: center;
   font-size: 13px;
-  color: var(--muted);
+  color: var(--color-text-muted);
   border-bottom: 2px solid transparent; /* linha invisível, só reserva o espaço */
 }
 
 /* Página atual: texto escuro, negrito e linha verde embaixo */
 .menu a.ativo {
-  color: var(--ink);
+  color: var(--color-text-strong);
   font-weight: 700;
-  border-color: var(--verde);
+  border-color: var(--color-brand);
 }
 
 .usuario {
@@ -96,13 +84,13 @@ a {
   width: 28px;
   height: 28px;
   border-radius: 50%; /* 50% transforma o quadrado em círculo */
-  background: var(--verde-esc);
-  color: var(--color-on-brand);
+  background: var(--color-brand-dark);
+  color: var(--color-surface);
   display: grid;
   place-items: center;
   font-weight: 700;
   font-size: 12px;
-  box-shadow: 0 0 0 2px var(--verde); /* anel verde ao redor */
+  box-shadow: 0 0 0 2px var(--color-brand); /* anel verde ao redor */
 }
 
 
@@ -128,14 +116,14 @@ h1 {
 
 .sub {
   font-size: 13px;
-  color: var(--muted);
+  color: var(--color-text-muted);
   margin-top: 4px;
 }
 
 /* Botão principal (verde escuro). A classe .btn é reaproveitada na janela também */
 .btn {
-  background: var(--verde-esc);
-  color: var(--verde);
+  background: var(--color-brand-dark);
+  color: var(--color-brand);
   border: 0;
   border-radius: 8px;
   padding: 10px 16px;
@@ -160,8 +148,8 @@ h1 {
 
 .card {
   min-width: 0;
-  background: var(--card);
-  border: 1px solid var(--line);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 22px;
   box-shadow: var(--shadow-card); /* sombra bem sutil */
@@ -179,7 +167,7 @@ h1 {
 .rotulo {
   font-size: 10px;
   font-weight: 700;
-  color: var(--verde);
+  color: var(--color-brand);
   letter-spacing: 0.3px;
 }
 
@@ -187,7 +175,7 @@ h1 {
 
 .profissao p {
   font-size: 12px;
-  color: var(--muted);
+  color: var(--color-text-muted);
   line-height: 1.6;   /* espaço entre linhas: facilita a leitura */
   max-width: 270px;
 }
@@ -197,7 +185,7 @@ h1 {
   margin-top: 18px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--verde);
+  color: var(--color-brand);
 }
 
 /* Caixa que guarda o anel e o texto central */
@@ -216,12 +204,12 @@ h1 {
   stroke-width: 9;    /* espessura do anel */
 }
 
-.anel .fundo { stroke: var(--trilho); }
+.anel .fundo { stroke: var(--color-surface-muted); }
 
 /* Parte verde: o JS controla o quanto dela aparece (stroke-dashoffset).
    A "transition" faz o anel crescer suavemente em vez de pular. */
 .anel .valor {
-  stroke: var(--verde);
+  stroke: var(--color-brand);
   stroke-linecap: round; /* pontas arredondadas */
   transition: stroke-dashoffset 0.6s ease;
 }
@@ -236,7 +224,7 @@ h1 {
 }
 
 .anel strong { font-size: 22px; }
-.anel span   { font-size: 8px; color: var(--muted); letter-spacing: 0.5px; }
+.anel span   { font-size: 8px; color: var(--color-text-muted); letter-spacing: 0.5px; }
 
 
 /* ---------- 7. LISTA DE TAREFAS ---------- */
@@ -245,7 +233,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--color-border);
   margin-bottom: 14px;
 }
 
@@ -256,7 +244,7 @@ h1 {
   background: none;
   border: 0;
   font: 700 11px 'DM Sans', sans-serif;
-  color: var(--muted);
+  color: var(--color-text-muted);
   cursor: pointer;
 }
 
@@ -273,7 +261,7 @@ ul {
   align-items: center;
   gap: 10px;
   background: var(--color-surface-soft);
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 9px 12px;
   font-size: 12px;
@@ -296,8 +284,8 @@ ul {
 .tarefa .selo { flex: none; }
 
 /* Tarefa concluída: ícone verde e texto mais apagado */
-.tarefa.concluido .marca { color: var(--verde); }
-.tarefa.concluido .nome  { color: var(--muted); }
+.tarefa.concluido .marca { color: var(--color-brand); }
+.tarefa.concluido .nome  { color: var(--color-text-muted); }
 
 /* Selo de status (a cor depende da classe da linha: concluido, andamento ou pendente) */
 .selo {
@@ -321,7 +309,7 @@ dialog h3 { margin-bottom: 14px; }
 dialog input {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font: 14px 'DM Sans', sans-serif;
 }
@@ -334,14 +322,14 @@ dialog input {
 }
 
 /* Variação clara do botão (usada no "Cancelar") */
-.btn.claro { background: var(--color-pending-soft); color: var(--ink); }
+.btn.claro { background: var(--color-pending-soft); color: var(--color-text-strong); }
 
 .pagina-acao { max-width: 680px; }
 
 .voltar {
   display: inline-block;
   margin-bottom: 24px;
-  color: var(--verde-esc);
+  color: var(--color-brand-dark);
   font-size: 13px;
   font-weight: 700;
 }
@@ -353,8 +341,8 @@ dialog input {
   gap: 9px;
   margin-top: 26px;
   padding: 24px;
-  background: var(--card);
-  border: 1px solid var(--line);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 }
 
@@ -365,7 +353,7 @@ dialog input {
 }
 
 .form-acao label span {
-  color: var(--muted);
+  color: var(--color-text-muted);
   font-weight: 400;
 }
 
@@ -374,10 +362,10 @@ dialog input {
 .form-acao select {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   background: var(--color-surface);
-  color: var(--ink);
+  color: var(--color-text-strong);
   font: 14px 'DM Sans', sans-serif;
 }
 

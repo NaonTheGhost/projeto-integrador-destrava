@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destrava + · Minha Carreira</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../assets/CSS/tokens.css">
     <link rel="stylesheet" href="../assets/CSS/carreira.css">
 </head>
 <body>
 
     <header class="header">
         <div class="header__interno">
-            <a href="index.html" class="logo">
+            <a href="painel.html" class="logo">
                 <svg class="logo__icone" viewBox="0 0 32 32" aria-hidden="true">
                     <rect width="32" height="32" rx="8" fill="#064E3B"/>
                     <path d="M16 9v14M9 16h14" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
@@ -20,7 +21,8 @@
             </a>
 
             <nav class="menu" aria-label="Principal">
-                <a href="index.html">Início</a>
+                <a href="inicio.html">Início</a>
+                <a href="painel.html">Painel</a>
                 <a href="carreira.html" class="ativo" aria-current="page">Minha Carreira</a>
                 <a href="progresso.html">Progresso</a>
             </nav>
@@ -46,8 +48,8 @@
                 </svg>
             </div>
             <div class="objetivo__texto">
-                <h2 id="objetivoTitulo">Cientista de Dados</h2>
-                <p id="objetivoDescricao">Profissional que transforma grandes volumes de dados em decisões inteligentes, utilizando algoritmos estatísticos e inteligência artificial para destravar o futuro das empresas.</p>
+                <h2 id="objetivoTitulo" data-objetivo-titulo>Cientista de Dados</h2>
+                <p id="objetivoDescricao" data-objetivo-descricao>Profissional que analisa dados e usa estatística, programação e visualização para apoiar decisões.</p>
             </div>
             <button type="button" class="botao-claro" id="botaoAlterar" aria-expanded="false" aria-controls="formObjetivo">Alterar objetivo</button>
         </section>
@@ -154,6 +156,7 @@
     </main>
     
 
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/JS/app.js"></script>
+    <script src="../assets/JS/script.js"></script>
 </body>
 </html>
