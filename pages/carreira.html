@@ -7,31 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="../assets/CSS/tokens.css">
     <link rel="stylesheet" href="../assets/CSS/carreira.css">
+    <link rel="stylesheet" href="../assets/CSS/header.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="header__interno">
-            <a href="painel.html" class="logo">
-                <svg class="logo__icone" viewBox="0 0 32 32" aria-hidden="true">
-                    <rect width="32" height="32" rx="8" fill="#064E3B"/>
-                    <path d="M16 9v14M9 16h14" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <span class="logo__nome">Destrava<b>+</b></span>
+   
+    <header class="app-header">
+        <div class="app-header__inner">
+            <a class="app-brand" href="carreira.html">
+                <img src="../assets/img/logo.png" alt="" width="30" height="30">
+                <span>Destrava<b>+</b></span>
             </a>
-
-            <nav class="menu" aria-label="Principal">
+            <nav class="app-nav" aria-label="Navegação principal">
                 <a href="inicio.html">Início</a>
                 <a href="painel.html">Painel</a>
-                <a href="carreira.html" class="ativo" aria-current="page">Minha Carreira</a>
+                <a href="carreira.html" aria-current="page">Minha Carreira</a>
                 <a href="progresso.html">Progresso</a>
             </nav>
-
-            <div class="perfil">
-                <span>Olá, <strong>Mariana</strong></span>
-                <div class="avatar" aria-hidden="true">M</div>
-            </div>
+            <a class="app-user" href="../index.html" aria-label="Sair da conta de Mariana e voltar para o login"
+                title="Sair e voltar para o login">
+                <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
+                <span class="app-user__avatar" aria-hidden="true">M</span>
+            </a>
         </div>
+
     </header>
 
     <main class="container">
