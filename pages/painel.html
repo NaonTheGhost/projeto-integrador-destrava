@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destrava+ | Painel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../assets/CSS/tokens.css">
+  <link rel="stylesheet" href="../assets/CSS/painel.css">
+  <link rel="stylesheet" href="../assets/CSS/header.css">
+</head>
+<body data-auth-required="false">
+
+  <header class="app-header">
+    <div class="app-header__inner">
+      <a class="app-brand" href="painel.html">
+        <img src="../assets/img/logo.png" alt="" width="30" height="30">
+        <span>Destrava<b>+</b></span>
+      </a>
+      <nav class="app-nav" aria-label="Navegação principal">
+        <a href="inicio.html">Início</a>
+        <a href="painel.html" aria-current="page">Painel</a>
+        <a href="carreira.html">Minha Carreira</a>
+        <a href="progresso.html">Progresso</a>
+      </nav>
+      <a class="app-user" href="../index.html" aria-label="Sair da conta de Mariana e voltar para o login" title="Sair e voltar para o login">
+        <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
+        <span class="app-user__avatar" aria-hidden="true">M</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Título de boas-vindas + botão de nova ação -->
+    <div class="cabecalho">
+      <div>
+        <h1>Olá, Mariana! Bem-vinda de volta.</h1>
+        <p class="sub">Seu plano está avançando super bem. Que tal dar mais um passo hoje?</p>
+      </div>
+      <a class="btn" href="nova-acao.html">Nova Ação</a>
+    </div>
+
+   
+    <div class="grade">
+
+      <!-- CARD 1: profissão objetivo e anel de progresso -->
+      <section class="card profissao">
+        <div>
+          <span class="rotulo">PROFISSÃO OBJETIVO</span>
+          <h2 data-objetivo-titulo>Cientista de Dados</h2>
+          <p data-objetivo-descricao>Profissional que analisa dados e usa estatística, programação e visualização para apoiar decisões.</p>
+          <a class="trilha" href="carreira.html#trilha">Acessar trilha completa →</a>
+        </div>
+
+        <!-- Anel de porcentagem. -->
+        <div class="anel" id="anel" role="img" aria-label="Progresso">
+          <svg width="110" height="110" viewBox="0 0 110 110">
+            <circle class="fundo" cx="55" cy="55" r="48"/>
+            <circle class="valor" id="valor" cx="55" cy="55" r="48"/>
+          </svg>
+          <div class="pct">
+            <strong id="pct">0%</strong>
+            <span>CONCLUÍDO</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 2: lista de tarefas -->
+      <section class="card">
+        <div class="tarefas-topo">
+          <h2>Tarefas prioritárias</h2>
+          <!-- O texto deste botão é escrito pelo JS: "Ver todas (5)" ou "Ver menos" -->
+          <button id="verTodas"></button>
+        </div>
+        <!-- As tarefas (<li>) são criadas pelo JavaScript dentro desta lista -->
+        <ul id="lista"></ul>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- O JavaScript vem por último, para o HTML já existir quando ele rodar -->
+  <script src="../assets/JS/app.js"></script>
+  <script src="../assets/JS/painel.js"></script>
+</body>
+</html>

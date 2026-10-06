@@ -3,39 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Destrava | Seu futuro começa aqui</title>
 
-    <link rel="stylesheet" href="../assets/css/inicio.css">
+    <link rel="stylesheet" href="../assets/CSS/tokens.css">
+    <link rel="stylesheet" href="../assets/CSS/inicio.css">
+    <link rel="stylesheet" href="../assets/CSS/header.css">
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-auth-required="false">
 
-    <!-- ================= HEADER ================= -->
 
-    <header class="header">
-        <div class="logo">
-            <span>des</span>trava
-        </div>
-
-        <nav class="menu">
-            <a href="#" class="ativo">Início</a>
-            <a href="#">Minha Carreira</a>
-            <a href="#">Cursos</a>
-            <a href="#">Vagas</a>
-        </nav>
-
-        <div class="usuario">
-            <button class="notificacao">🔔</button>
-            <div class="perfil">
-                <div class="avatar">M</div>
-                <span>Marina</span>
-            </div>
-
+    <header class="app-header">
+        <div class="app-header__inner">
+            <a class="app-brand" href="inicio.html">
+                <img src="../assets/img/logo.png" alt="" width="30" height="30">
+                <span>Destrava<b>+</b></span>
+            </a>
+            <nav class="app-nav" aria-label="Navegação principal">
+                <a href="inicio.html" aria-current="page">Início</a>
+                <a href="painel.html">Painel</a>
+                <a href="carreira.html">Minha Carreira</a>
+                <a href="progresso.html">Progresso</a>
+            </nav>
+            <a class="app-user" href="../index.html" aria-label="Sair da conta de Mariana e voltar para o login"
+                title="Sair e voltar para o login">
+                <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
+                <span class="app-user__avatar" aria-hidden="true">M</span>
+            </a>
         </div>
 
     </header>
@@ -56,13 +55,13 @@
 
                 <div class="botoes">
 
-                    <button class="btn-principal">
+                    <a class="btn-principal" href="painel.html">
                         Começar agora →
-                    </button>
+                    </a>
 
-                    <button class="btn-secundario">
+                    <a class="btn-secundario" href="#cursos">
                         Explorar cursos
-                    </button>
+                    </a>
 
                 </div>
 
@@ -90,7 +89,7 @@
                         Descubra caminhos profissionais
                         que combinam com você.
                     </p>
-                    <button>Explorar →</button>
+                    <a href="carreira.html">Explorar →</a>
                 </div>
 
                 <div class="objetivo-card azul">
@@ -100,7 +99,7 @@
                         Desenvolva habilidades para
                         se destacar no mercado.
                     </p>
-                    <button>Ver cursos →</button>
+                    <a href="#cursos">Ver cursos →</a>
                 </div>
 
                 <div class="objetivo-card laranja">
@@ -110,7 +109,7 @@
                         Transforme seus objetivos
                         em pequenos passos.
                     </p>
-                    <button>Começar →</button>
+                    <a href="painel.html">Começar →</a>
                 </div>
 
                 <div class="objetivo-card azul-claro">
@@ -120,12 +119,12 @@
                         Planeje sua trajetória
                         profissional.
                     </p>
-                    <button>Planejar →</button>
+                    <a href="painel.html">Planejar →</a>
                 </div>
             </div>
         </section>
         <!--cursos-->
-        <section class="secao">
+        <section class="secao" id="cursos">
             <div class="titulo-secao">
                 <div>
                     <span>APRENDA NO SEU RITMO</span>
@@ -137,15 +136,15 @@
                         na sua carreira.
                     </p>
                 </div>
-                <a href="#">Ver todos →</a>
+                <a href="#carrosselCursos">Ver todos →</a>
             </div>
 
             <div class="carrossel-container">
-                <button class="seta esquerda" id="cursoAnterior">
+                <button class="seta esquerda" id="cursoAnterior" type="button" aria-label="Cursos anteriores" aria-controls="carrosselCursos">
                     ‹
                 </button>
 
-                <div class="carrossel" id="carrosselCursos">
+                <div class="carrossel" id="carrosselCursos" role="region" aria-label="Cursos disponíveis" tabindex="0">
                     <article class="curso-card">
                         <div class="curso-imagem verde-fundo">
                             💻
@@ -157,7 +156,7 @@
                                 Aprenda a criar suas primeiras páginas.
                             </p>
                             <div class="curso-info">
-                                 8 horas
+                                8 horas
                                 <span> 4.9</span>
                             </div>
                         </div>
@@ -176,7 +175,7 @@
                                 Aprenda a se comunicar melhor.
                             </p>
                             <div class="curso-info">
-                                 5 horas
+                                5 horas
                                 <span> 4.8</span>
                             </div>
                         </div>
@@ -193,7 +192,7 @@
                                 Monte um currículo que destaque você.
                             </p>
                             <div class="curso-info">
-                                 3 horas
+                                3 horas
                                 <span> 4.9</span>
                             </div>
                         </div>
@@ -211,7 +210,7 @@
                                 Desenvolva sua confiança.
                             </p>
                             <div class="curso-info">
-                                 4 horas
+                                4 horas
                                 <span> 4.7</span>
                             </div>
 
@@ -219,8 +218,58 @@
 
                     </article>
 
+                    <article class="curso-card">
+                        <div class="curso-imagem azul-fundo">📊</div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">TECNOLOGIA</span>
+                            <h3>Primeiros passos com análise de dados</h3>
+                            <p>Conheça planilhas, gráficos e conceitos de análise.</p>
+                            <div class="curso-info">6 horas <span>Iniciante</span></div>
+                        </div>
+                    </article>
+
+                    <article class="curso-card">
+                        <div class="curso-imagem verde2-fundo">🐍</div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">TECNOLOGIA</span>
+                            <h3>Lógica de programação com Python</h3>
+                            <p>Pratique variáveis, condições e repetições.</p>
+                            <div class="curso-info">10 horas <span>Iniciante</span></div>
+                        </div>
+                    </article>
+
+                    <article class="curso-card">
+                        <div class="curso-imagem laranja-fundo">💰</div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">FINANÇAS</span>
+                            <h3>Organização financeira pessoal</h3>
+                            <p>Aprenda a planejar gastos e acompanhar seu orçamento.</p>
+                            <div class="curso-info">3 horas <span>Iniciante</span></div>
+                        </div>
+                    </article>
+
+                    <article class="curso-card">
+                        <div class="curso-imagem verde-fundo">🎨</div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">DESIGN</span>
+                            <h3>Fundamentos de design gráfico</h3>
+                            <p>Explore cores, composição e comunicação visual.</p>
+                            <div class="curso-info">5 horas <span>Iniciante</span></div>
+                        </div>
+                    </article>
+
+                    <article class="curso-card">
+                        <div class="curso-imagem azul-fundo">🛍️</div>
+                        <div class="curso-conteudo">
+                            <span class="categoria">NEGÓCIOS</span>
+                            <h3>Atendimento e experiência do cliente</h3>
+                            <p>Pratique escuta, comunicação e resolução de problemas.</p>
+                            <div class="curso-info">4 horas <span>Iniciante</span></div>
+                        </div>
+                    </article>
+
                 </div>
-                <button class="seta direita" id="cursoProximo">
+                <button class="seta direita" id="cursoProximo" type="button" aria-label="Próximos cursos" aria-controls="carrosselCursos">
                     ›
                 </button>
 
@@ -228,25 +277,23 @@
 
         </section>
         <!-- vagas-->
-        <section class="secao oportunidades">
+        <section class="secao oportunidades" id="oportunidades">
             <div class="titulo-secao">
                 <div>
                     <span>OPORTUNIDADES PARA VOCÊ</span>
                     <h2>
                         Encontre sua próxima <strong>oportunidade</strong>
                     </h2>
-                    <p>
-                        Vagas que podem combinar com seu perfil.
-                    </p>
+                    <p>Exemplos de áreas e oportunidades para explorar. Consulte as empresas para confirmar vagas abertas.</p>
                 </div>
-                <a href="#">Ver todas →</a>
+                <a href="#carrosselVagas">Ver todas →</a>
             </div>
 
             <div class="carrossel-container">
-                <button class="seta esquerda" id="vagaAnterior">
+                <button class="seta esquerda" id="vagaAnterior" type="button" aria-label="Oportunidades anteriores" aria-controls="carrosselVagas">
                     ‹
                 </button>
-                <div class="carrossel" id="carrosselVagas">
+                <div class="carrossel" id="carrosselVagas" role="region" aria-label="Oportunidades profissionais" tabindex="0">
                     <article class="vaga-card">
                         <div class="empresa-logo">
                             🏥
@@ -262,9 +309,9 @@
                             </small>
                             <div class="vaga-final">
                                 <span>
-                                    R$ 1.200/mês
+                                    Saúde
                                 </span>
-                                <button>Ver vaga →</button>
+                                <button type="button" disabled>Detalhes em breve</button>
                             </div>
                         </div>
                     </article>
@@ -284,9 +331,9 @@
                             </small>
                             <div class="vaga-final">
                                 <span>
-                                    R$ 1.500/mês
+                                    Tecnologia
                                 </span>
-                                <button>Ver vaga →</button>
+                                <button type="button" disabled>Detalhes em breve</button>
                             </div>
                         </div>
                     </article>
@@ -299,15 +346,15 @@
                                 JOVEM APRENDIZ
                             </span>
                             <h3>Assistente Administrativo</h3>
-                            <p>Grupo Nova</p>
+                            <p>Grupo Nova </p>
                             <small>
                                 📍 Guarulhos, SP
                             </small>
                             <div class="vaga-final">
                                 <span>
-                                    R$ 900/mês
+                                    Administração
                                 </span>
-                                <button>Ver vaga →</button>
+                                <button type="button" disabled>Detalhes em breve</button>
                             </div>
                         </div>
                     </article>
@@ -321,20 +368,104 @@
                                 ESTÁGIO
                             </span>
                             <h3>Estágio em Marketing</h3>
-                            <p>Conecta Digital</p>
+                            <p>Conecta Digital </p>
                             <small>
                                 📍 São Paulo, SP
                             </small>
                             <div class="vaga-final">
                                 <span>
-                                    R$ 1.300/mês
+                                    Marketing
                                 </span>
-                                <button>Ver vaga →</button>
+                                <button type="button" disabled>Detalhes em breve</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">🎨</div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">ESTÁGIO</span>
+                            <h3>Assistente de Design Gráfico</h3>
+                            <p>Estúdio Criativo </p>
+                            <small>📍 Remoto</small>
+                            <div class="vaga-final">
+                                <span>Design e comunicação</span>
+                                <button type="button" disabled>Detalhes em breve</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">📈</div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">JOVEM APRENDIZ</span>
+                            <h3>Assistente de Recursos Humanos</h3>
+                            <p>Conexão Pessoas </p>
+                            <small>📍 São Paulo, SP</small>
+                            <div class="vaga-final">
+                                <span>Recursos humanos</span>
+                                <button type="button" disabled>Detalhes em breve</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">🍳</div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">JOVEM APRENDIZ</span>
+                            <h3>Auxiliar de Cozinha</h3>
+                            <p>Sabor &amp; Arte </p>
+                            <small>📍 Campinas, SP</small>
+                            <div class="vaga-final">
+                                <span>Gastronomia</span>
+                                <button type="button" disabled>Detalhes em breve</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">⚙️</div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">ESTÁGIO</span>
+                            <h3>Estágio em Engenharia Ambiental</h3>
+                            <p>Verde Futuro </p>
+                            <small>📍 Sorocaba, SP</small>
+                            <div class="vaga-final">
+                                <span>Meio ambiente</span>
+                                <button type="button" disabled>Detalhes em breve</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">🐾</div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">JOVEM APRENDIZ</span>
+                            <h3>Auxiliar de Clínica Veterinária</h3>
+                            <p>Bem-Estar Animal</p>
+                            <small>📍 Santos, SP</small>
+                            <div class="vaga-final">
+                                <span>Saúde animal</span>
+                                <button type="button" disabled>Detalhes em breve</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="empresa-logo">📦</div>
+                        <div class="vaga-conteudo">
+                            <span class="tipo-vaga">JOVEM APRENDIZ</span>
+                            <h3>Assistente de Logística</h3>
+                            <p>Rota Certa </p>
+                            <small>📍 Guarulhos, SP</small>
+                            <div class="vaga-final">
+                                <span>Logística</span>
+                                <button type="button" disabled>Detalhes em breve</button>
                             </div>
                         </div>
                     </article>
                 </div>
-                <button class="seta direita" id="vagaProxima">
+                <button class="seta direita" id="vagaProxima" type="button" aria-label="Próximas oportunidades" aria-controls="carrosselVagas">
                     ›
                 </button>
             </div>
@@ -344,15 +475,15 @@
             <div>
                 <span>SEU DESENVOLVIMENTO</span>
                 <h2>
-                    Você já está <strong>destravando!</strong> 
+                    Você já está <strong>destravando!</strong>
                 </h2>
                 <p>
                     Continue aprendendo para chegar cada vez mais perto
                     dos seus objetivos.
                 </p>
-                <button class="btn-principal">
+                <a class="btn-principal" href="painel.html">
                     Continuar aprendendo →
-                </button>
+                </a>
             </div>
 
             <div class="progresso-circulo">
@@ -366,7 +497,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="sobre">
         <div class="logo">
             <span>des</span>trava
         </div>
@@ -374,10 +505,12 @@
             Destrave seu potencial. Construa seu futuro.
         </p>
         <div class="footer-links">
-            <a href="#">Sobre nós</a>
-            <a href="#">Contato</a>
-            <a href="#">Privacidade</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="termos-de-servico.html">Termos e privacidade</a>
         </div>
     </footer>
+    <script src="../assets/JS/app.js"></script>
+    <script src="../assets/JS/inicio.js"></script>
 </body>
+
 </html>

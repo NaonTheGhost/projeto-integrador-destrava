@@ -15,11 +15,8 @@
   --color-brand-hover: #0d9488;
   --color-brand-hover-dark: #0b5140;
   --color-brand-hover-deep: #0b7658;
-  --color-hero: #1e293b;
   --color-hero-deep: #033d30;
   --color-hero-mid: #05503f;
-  --color-on-brand: #ffffff;
-  --color-on-hero-muted: #cbd5e1;
   --color-brand-soft: #d1fae5;
   --color-blue-soft: #dbeafe;
   --color-orange-soft: #ffedd5;
@@ -48,7 +45,6 @@
   --shadow-floating: 0 10px 30px rgba(0, 0, 0, 0.2);
   --shadow-card: 0 1px 3px rgba(15, 31, 46, 0.04);
   --shadow-card-hover: 0 15px 30px rgba(0, 0, 0, 0.1);
-  --shadow-objective: 0 15px 30px rgba(0, 0, 0, 0.1);
   --shadow-course: 0 5px 20px rgba(0, 0, 0, 0.07);
   --shadow-course-hover: 0 15px 30px rgba(0, 0, 0, 0.12);
   --shadow-arrow: 0 5px 20px rgba(0, 0, 0, 0.15);
@@ -57,4 +53,11 @@
   --shadow-login-button: 0 6px 16px rgba(16, 185, 129, 0.3);
   --shadow-progress: 0 4px 15px rgba(0, 0, 0, 0.03);
   --shadow-progress-strong: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-career-title: #0f1f2e;
+  --color-career-border: #ebe8e1;
+  --color-career-brand: #0f9d7a;
+  --color-career-brand-dark: #064e3b;
 }

@@ -1,25 +1,3 @@
-/* =========================================
-   VARIÁVEIS DE CORES E ESTILO GLOBAL
-   ========================================= */
-:root {
-    --primary-dark: var(--color-brand-dark); /* Verde bem escuro do banner inferior */
-    --accent-green: var(--color-brand); /* Verde vibrante da barra de progresso e botões */
-    --bg-page: var(--color-page);      /* Fundo geral compartilhado pelas páginas */
-    --bg-card: var(--color-surface);      /* Fundo branco dos cards */
-    
-    --text-main: var(--color-text);
-    --text-muted: var(--color-text-muted);
-    --border-color: var(--color-border);
-
-    /* Cores das tags e status */
-    --success-bg: var(--color-brand-soft);
-    --success-text: var(--color-success);
-    --warning-bg: var(--color-warning-soft);
-    --warning-text: var(--color-warning);
-    --pending-bg: var(--color-pending-soft);
-    --pending-text: var(--color-pending);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -28,8 +6,8 @@
 }
 
 body {
-    background-color: var(--bg-page);
-    color: var(--text-main);
+    background-color: var(--color-page);
+    color: var(--color-text);
     padding-bottom: 50px;
 }
 
@@ -41,8 +19,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: var(--bg-card);
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
@@ -51,11 +29,11 @@ body {
     gap: 8px;
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--text-main);
+    color: var(--color-text);
 }
 
 .logo span {
-    color: var(--accent-green); /* O "+" verde no logo */
+    color: var(--color-brand); /* O "+" verde no logo */
 }
 
 .logo-icon {
@@ -64,7 +42,7 @@ body {
     height: 48px;
     flex-shrink: 0;
     border-radius: 14px;
-    background-color: var(--color-hero);
+    background-color: var(--color-text);
 }
 
 .logo-icon::before,
@@ -73,7 +51,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: var(--accent-green);
+    background-color: var(--color-brand);
     border-radius: 3px;
     transform: translate(-50%, -50%);
 }
@@ -96,7 +74,7 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     font-size: 0.95rem;
     font-weight: 500;
     padding: 20px 0;
@@ -105,11 +83,11 @@ body {
 }
 
 .navbar a:hover {
-    color: var(--text-main);
+    color: var(--color-text);
 }
 
 .navbar a.active {
-    color: var(--text-main);
+    color: var(--color-text);
     font-weight: 600;
 }
 
@@ -121,7 +99,7 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: var(--accent-green);
+    background-color: var(--color-brand);
     border-radius: 3px 3px 0 0;
 }
 
@@ -162,7 +140,7 @@ body {
 }
 
 .page-header p {
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     font-size: 0.95rem;
     margin-bottom: 30px;
 }
@@ -171,7 +149,7 @@ body {
    ESTILO GERAL DOS CARDS
    ========================================= */
 .card {
-    background-color: var(--bg-card);
+    background-color: var(--color-surface);
     border-radius: 16px;
     padding: 30px;
     box-shadow: var(--shadow-progress);
@@ -211,7 +189,7 @@ body {
     height: 110px;
     border-radius: 50%;
     /* Desenha o gráfico circular com CSS: 40% verde, o resto cinza */
-    background: conic-gradient(var(--accent-green) 40%, var(--pending-bg) 40%);
+    background: conic-gradient(var(--color-brand) 40%, var(--color-pending-soft) 40%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +200,7 @@ body {
 .circle-content {
     width: 85px;
     height: 85px;
-    background-color: var(--bg-card);
+    background-color: var(--color-surface);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -233,13 +211,13 @@ body {
 .percentage {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: var(--color-text);
 }
 
 .label {
     font-size: 0.6rem;
     font-weight: 600;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     letter-spacing: 0.5px;
 }
 
@@ -250,7 +228,7 @@ body {
 
 .progress-text p {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     line-height: 1.5;
 }
 
@@ -275,23 +253,23 @@ body {
 
 .badge span {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
 }
 
 /* Cores específicas das badges */
 .status-success {
-    background-color: var(--success-bg);
-    color: var(--success-text);
+    background-color: var(--color-brand-soft);
+    color: var(--color-success);
 }
 
 .status-warning {
-    background-color: var(--warning-bg);
-    color: var(--warning-text);
+    background-color: var(--color-warning-soft);
+    color: var(--color-warning);
 }
 
 .status-pending {
-    background-color: var(--pending-bg);
-    color: var(--pending-text);
+    background-color: var(--color-pending-soft);
+    color: var(--color-pending);
 }
 
 /* =========================================
@@ -314,7 +292,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 20px;
-    border: 1px solid var(--border-color); /* Bordinha leve igual na imagem */
+    border: 1px solid var(--color-border); /* Bordinha leve igual na imagem */
     border-radius: 12px;
 }
 
@@ -330,9 +308,9 @@ body {
     height: 10px;
     border-radius: 50%;
 }
-.dot.success { background-color: var(--success-text); }
-.dot.warning { background-color: var(--warning-text); }
-.dot.pending { background-color: var(--pending-text); }
+.dot.success { background-color: var(--color-success); }
+.dot.warning { background-color: var(--color-warning); }
+.dot.pending { background-color: var(--color-pending); }
 
 .activity-text h4 {
     font-size: 1rem;
@@ -342,7 +320,7 @@ body {
 
 .activity-text .date {
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
 }
 
 /* Tags pequenas de status na direita */
@@ -352,16 +330,16 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
 }
-.status-tag.success { background-color: var(--success-bg); color: var(--success-text); }
-.status-tag.warning { background-color: var(--warning-bg); color: var(--warning-text); }
-.status-tag.pending { background-color: var(--pending-bg); color: var(--pending-text); }
+.status-tag.success { background-color: var(--color-brand-soft); color: var(--color-success); }
+.status-tag.warning { background-color: var(--color-warning-soft); color: var(--color-warning); }
+.status-tag.pending { background-color: var(--color-pending-soft); color: var(--color-pending); }
 
 /* =========================================
    BANNER INFERIOR MOTIVACIONAL
    ========================================= */
 .motivation-banner {
-    background-color: var(--primary-dark);
-    color: var(--color-on-brand);
+    background-color: var(--color-brand-dark);
+    color: var(--color-surface);
     border-radius: 16px;
     padding: 20px 30px;
     display: flex;
@@ -377,8 +355,8 @@ body {
 }
 
 .btn-advance {
-    background-color: var(--accent-green);
-    color: var(--color-on-brand);
+    background-color: var(--color-brand);
+    color: var(--color-surface);
     border: none;
     padding: 12px 24px;
     border-radius: 8px;

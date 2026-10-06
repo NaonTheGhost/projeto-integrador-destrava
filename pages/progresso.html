@@ -1,128 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/CSS/progresso.css">
-    <title>Progresso</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/CSS/tokens.css">
+  <link rel="stylesheet" href="../assets/CSS/Progresso.css">
+  <link rel="stylesheet" href="../assets/CSS/header.css">
+  <title>Progresso</title>
 </head>
-<body>
-  <header class="header">
-   <div class="logo">
-   <!-- onde vai o logo -->   
-  <div class="logo-icon" aria-hidden="true"></div>
-   <h1>Destrava <span>+</span></h1>
-  </div>
 
-   <Nav class="navbar">
-    <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Minha Carreira</a></li>
-        <li><a href="#">Progresso</a></li>
-    </ul>
-   </Nav>
+<body data-auth-required="false">
+  <header class="app-header">
+    <div class="app-header__inner">
+      <a class="app-brand" href="inicio.html">
+        <img src="../assets/img/logo.png" alt="" width="30" height="30">
+        <span>Destrava<b>+</b></span>
+      </a>
+      <nav class="app-nav" aria-label="Navegação principal">
+        <a href="inicio.html">Início</a>
+        <a href="painel.html">Painel</a>
+        <a href="carreira.html">Minha Carreira</a>
+        <a href="progresso.html" aria-current="page">Progresso</a>
+      </nav>
+      <a class="app-user" href="../index.html" aria-label="Sair da conta de Mariana e voltar para o login"
+        title="Sair e voltar para o login">
+        <span class="app-user__greeting">Olá, <strong>Mariana</strong></span>
+        <span class="app-user__avatar" aria-hidden="true">M</span>
+      </a>
+    </div>
+  </header>
 
- <div class="user-profile">
-   <span>Olá, Mariana</span>
-   <div class="avatar" role="img" aria-label="Ícone de perfil de Mariana">M</div>
- </div>
- </header>
+  <main class="container">
 
- <main class="container">
+    <section class="page-header">
+      <h2>Meu Progresso</h2>
+      <p>Objetivo: <strong data-objetivo-titulo>Cientista de Dados</strong> — <span data-objetivo-descricao>Profissional que analisa dados e usa estatística, programação e visualização para apoiar decisões.</span></p>
+    </section>
 
-  <section class="page-header">
-    <h2>Meu Progresso</h2>
-    <p>Acompanhe cada etapa vencida em direção a profissão planejada.</p>
-  </section>
-     
     <section class="summary-cards">
       <div class="card progress-card">
         <div class="circular-progress">
-         <div class="circle-content">
-           <span class="percentage">40%</span>
-           <span class="label">Concluído</span>
-       </div>
-    </div>
-       <div class="progress-text">
-                    <h3>Progresso Geral</h3>
-                    <p>Você já realizou 40% das ações previstas na sua jornada inicial de Ciência de Dados e IA. Muito bem!</p>
-                </div>
-           </div>
+          <div class="circle-content">
+            <span class="percentage">40%</span>
+            <span class="label">Concluído</span>
+          </div>
+        </div>
+        <div class="progress-text">
+          <h3>Progresso Geral</h3>
+          <p>Você ainda não tem ações cadastradas no seu plano.</p>
+        </div>
+      </div>
 
-  <div class="card details-card">
-    <h3>Detalhamento das ações</h3>
-    <div class="details-badges"> 
-        <div class="badge status-success">
-            <strong>2 Concluídas</strong>
+      <div class="card details-card">
+        <h3>Detalhamento das ações</h3>
+        <div class="details-badges">
+          <div class="badge status-success">
+            <strong>0 Concluídas</strong>
             <span>Tarefas cadastradas</span>
-        </div>
-        <div class="badge status-warning">
-            <strong>1 Em andamento</strong>
+          </div>
+          <div class="badge status-warning">
+            <strong>0 Em andamento</strong>
             <span>Tarefas cadastradas</span>
-         </div>
-         <div class="badge status-pending">
-                        <strong>2 Pendentes</strong>
-                        <span>tarefas cadastradas</span>
-         </div>              
+          </div>
+          <div class="badge status-pending">
+            <strong>0 Pendentes</strong>
+            <span>tarefas cadastradas</span>
+          </div>
         </div>
-       </div>
+      </div>
 
     </section>
-    
- <section class="card history-section">
-    <h3>Histórico de Ações</h3>
-    <ul class="activity-list">
-      <li class="activity-item">
-        <div class="activity-info">
-         <span class="dot success"></span>
-         <div class="activity-text">
-            <h4>Definição de Objetivo Profissional</h4>
-            <span class="date">01/10/2024</span>
-         </div>
-     </div>   
-     <span class="status-tag success">Concluído</span>
-    </li>
 
-
-     <li class="activity-item">
-                    <div class="activity-info">
-                        <span class="dot success"></span>
-                        <div class="activity-text">
-                            <h4>Introdução à Ciência de Dados</h4>
-                            <span class="date">12/10/2024</span>
-                        </div>
-                    </div>
-                    <span class="status-tag success">Concluído</span>
-                </li>
-
-
-    <li class="activity-item">
-      <div class="activity-info">
-        <span class="dont warning"></span>
-        <div class="activity-text">
-            <h4>Estudos Avançados de Python</h4>
-            <span class="date">24/10/2026</span>
-        </div>
-      </div> 
-      <span class="status-tag warning">Em andamento</span>
-    </li>   
- <li class="activity-item">
-        <div class="activity-info">
-            <span class="dot pending"></span>
-            <div class="activity-text">
-                <h4>Configuração do Ambiente SQL</h4>
-                <span class="date">Pendente</span>
-            </div>
-        </div>
-        <span class="status-tag pending">Pendente</span>
-    </li>
-</ul>
- </section>
-   <section class="motivation-banner">
-     <p>Continue assim! cada passo conta. 🚀 </p>
+    <section class="card history-section">
+      <h3>Ações do plano</h3>
+      <ul class="activity-list" id="listaHistorico"></ul>
+    </section>
+    <section class="motivation-banner">
+      <p>Continue assim! cada passo conta. 🚀 </p>
       <a class="btn-advance" href="inicio.html">Avançar Trilha</a>
-   </section>
- </main>
-    <script src="assets/JS/script.js"></script>
+    </section>
+  </main>
+  <script src="../assets/JS/app.js"></script>
+  <script src="../assets/JS/script.js"></script>
 </body>
+
 </html>

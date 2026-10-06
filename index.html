@@ -3,47 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login | Destrava +</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/tokens.css">
     <link rel="stylesheet" href="assets/CSS/cadastro-e-login.css">
 </head>
 <body>
+
     <main id="conteudo-login">
+        <section class="apresentacao">
+            <h2>Organize sua jornada profissional em um só lugar</h2>
+            <p>O Destrava + ajuda jovens a entenderem os passos práticos para alcançar a profissão dos sonhos, transformando objetivos em um plano de desenvolvimento simples e acessível.</p>
+        </section>
+
         <div class="bloco bloco-login">
-            <div class="marca-login">
-                <!--Nome da empresa ou logo.-->
-            </div>
-            <h1>Entrar</h1>
 
-            <form id="form-login" action="#" method="post">
-                <div class="campo">
-                    <label for="input-email">E-mail</label>
-                    <input type="email" id="input-email" name="email" required>
-                </div>
-                <div class="campo">
-                    <label for="input-password">Senha</label>
-                    <input type="password" id="input-password" name="senha" required>
-                </div>
+            <!-- LOGIN -->
+            <section id="painel-login">
+                <h1>Entrar no Destrava <em>+</em></h1>
+                <p class="subtitulo">Acesse seu painel personalizado</p>
 
-                <div class="campo campo-options">
-                    <label class="campo-checkbox">
-                        <input type="checkbox" id="input-memory" name="lembrar">
-                        Lembrar de mim.
-                    </label>
-                    <a href="pages/recuperar-senha.html" class="link-forgotten-password">Esqueci minha senha</a>
-                </div>
+                <form id="form-login" action="#" method="post" novalidate>
+                    <div class="campo">
+                        <label for="input-email">Seu e-mail</label>
+                        <input type="email" id="input-email" name="email" placeholder="mariana@exemplo.com.br" autocomplete="email" required>
+                        <p class="erro" id="erro-email" role="alert"></p>
+                    </div>
 
-                <button type="submit">Entrar</button>
-            </form>
+                    <div class="campo">
+                        <div class="linha-label">
+                            <label for="input-password">Sua senha</label>
+                            <a href="pages/recuperar-senha.html" class="link-forgotten-password">Esqueceu a senha?</a>
+                        </div>
+                        <input type="password" id="input-password" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+                        <p class="erro" id="erro-senha" role="alert"></p>
+                    </div>
 
-            <p class="cadastro-login">
-                Ainda não tem conta? <a href="pages/cadastro.html">Criar conta</a>
-            </p>
+                    <div class="campo campo-options">
+                        <label class="campo-checkbox">
+                            <input type="checkbox" id="input-memory" name="lembrar">
+                            Lembrar de mim
+                        </label>
+                    </div>
 
-            <p class="cadastro-login">
-                Representa uma empresa ainda não cadastrada? <a href="pages/cadastro-empresas.html">Criar conta empresarial</a>
-            </p>
+                    <button type="submit">Entrar na plataforma</button>
+                </form>
+
+                <p class="cadastro-login">
+                    Não tem uma conta? <a class="link-troca" href="pages/cadastro.html">Criar conta</a>
+                </p>
+            </section>
         </div>
     </main>
-    <script src="assets/JS/cadastro-e-login.js"></script>
+    <script src="assets/JS/auth-utils.js"></script>
+    <script src="assets/JS/login.js"></script>
 </body>
 </html>

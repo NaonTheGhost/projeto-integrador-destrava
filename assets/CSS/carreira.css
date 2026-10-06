@@ -1,28 +1,17 @@
- :root {
-          --fundo: #faf8f4;
-          --branco: #ffffff;
-          --borda: #ebe8e1;
-          --titulo: #0f1f2e;
-          --texto: #64748b;
-          --verde: #0f9d7a;
-          --verde-escuro: #064e3b;
-          --fonte: "Plus Jakarta Sans", system-ui, sans-serif;
-        }
-
-        * { box-sizing: border-box; margin: 0; }
+ * { box-sizing: border-box; margin: 0; }
 
         body {
-          background: var(--fundo);
-          color: var(--titulo);
-          font-family: var(--fonte);
+          background: var(--color-page);
+          color: var(--color-career-title);
+          font-family: var(--font-display);
           min-height: 100vh;
         }
 
         a { color: inherit; text-decoration: none; }
-        :focus-visible { outline: 2px solid var(--verde); outline-offset: 2px; }
+        :focus-visible { outline: 2px solid var(--color-career-brand); outline-offset: 2px; }
 
         
-        .header { background: var(--branco); border-bottom: 1px solid var(--borda); }
+        .header { background: var(--color-surface); border-bottom: 1px solid var(--color-career-border); }
 
         .header__interno {
           max-width: 1000px;
@@ -37,7 +26,7 @@
 
         .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; }
         .logo__icone { width: 28px; height: 28px; }
-        .logo__nome b { color: var(--verde); }
+        .logo__nome b { color: var(--color-career-brand); }
 
         .menu { display: flex; gap: 28px; height: 100%; }
         .menu a {
@@ -45,11 +34,11 @@
           align-items: center;
           font-size: 12px;
           font-weight: 500;
-          color: var(--texto);
+          color: var(--color-text-muted);
           border-bottom: 2px solid transparent;
         }
-        .menu a:hover { color: var(--titulo); }
-        .menu a.ativo { color: var(--titulo); font-weight: 700; border-color: var(--verde); }
+        .menu a:hover { color: var(--color-career-title); }
+        .menu a.ativo { color: var(--color-career-title); font-weight: 700; border-color: var(--color-career-brand); }
 
         .perfil { display: flex; align-items: center; gap: 10px; font-size: 12px; }
         .perfil strong { font-weight: 700; }
@@ -59,7 +48,7 @@
           display: grid;
           place-items: center;
           border-radius: 50%;
-          background: var(--verde-escuro);
+          background: var(--color-career-brand-dark);
           color: #a7f3d0;
           font-size: 13px;
           font-weight: 700;
@@ -70,7 +59,7 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px 80px; }
 
         .titulo-pagina h1 { font-size: 30px; font-weight: 800; letter-spacing: -.5px; }
-        .titulo-pagina p { color: var(--texto); font-size: 12px; margin-top: 8px; }
+        .titulo-pagina p { color: var(--color-text-muted); font-size: 12px; margin-top: 8px; }
 
        
         .objetivo {
@@ -119,7 +108,7 @@
           position: relative;
           z-index: 1;
           flex-shrink: 0;
-          font: 700 11px var(--fonte);
+          font: 700 11px var(--font-display);
           color: #fff;
           background: rgba(255, 255, 255, .12);
           border: 1px solid rgba(255, 255, 255, .4);
@@ -136,20 +125,20 @@
           gap: 8px;
           margin-top: 12px;
           padding: 20px 24px;
-          background: var(--branco);
-          border: 1px solid var(--borda);
+          background: var(--color-surface);
+          border: 1px solid var(--color-career-border);
           border-radius: 12px;
           box-shadow: 0 1px 3px rgba(15, 31, 46, .04);
         }
         .form-objetivo h3 { font-size: 14px; font-weight: 800; margin-bottom: 4px; }
         .form-objetivo label { font-size: 11px; font-weight: 700; margin-top: 6px; }
-        .form-objetivo label span { font-weight: 500; color: var(--texto); }
+        .form-objetivo label span { font-weight: 500; color: var(--color-text-muted); }
 
         .form-objetivo input,
         .form-objetivo textarea {
           width: 100%;
-          font: 500 13px var(--fonte);
-          color: var(--titulo);
+          font: 500 13px var(--font-display);
+          color: var(--color-career-title);
           padding: 10px 12px;
           border: 1px solid #d9d5cc;
           border-radius: 8px;
@@ -157,19 +146,19 @@
           resize: vertical;
         }
         .form-objetivo input:focus,
-        .form-objetivo textarea:focus { outline: 2px solid var(--verde); outline-offset: 0; border-color: var(--verde); }
+        .form-objetivo textarea:focus { outline: 2px solid var(--color-career-brand); outline-offset: 0; border-color: var(--color-career-brand); }
 
         .form-objetivo__botoes { display: flex; gap: 10px; margin-top: 8px; }
         .botao-principal,
         .botao-secundario {
-          font: 700 12px var(--fonte);
+          font: 700 12px var(--font-display);
           padding: 10px 18px;
           border-radius: 8px;
           cursor: pointer;
         }
-        .botao-principal { color: #fff; background: var(--verde); border: 1px solid var(--verde); }
+        .botao-principal { color: #fff; background: var(--color-career-brand); border: 1px solid var(--color-career-brand); }
         .botao-principal:hover { background: #0b8767; }
-        .botao-secundario { color: var(--titulo); background: transparent; border: 1px solid #d9d5cc; }
+        .botao-secundario { color: var(--color-career-title); background: transparent; border: 1px solid #d9d5cc; }
         .botao-secundario:hover { background: #f3f0ea; }
 
        
@@ -180,8 +169,8 @@
 
         .card {
           padding: 14px 16px;
-          background: var(--branco);
-          border: 1px solid var(--borda);
+          background: var(--color-surface);
+          border: 1px solid var(--color-career-border);
           border-radius: 12px;
           box-shadow: 0 1px 3px rgba(15, 31, 46, .04);
         }
@@ -200,7 +189,7 @@
           flex-shrink: 0;
           appearance: none;
           -webkit-appearance: none;
-          font: 700 9px var(--fonte);
+          font: 700 9px var(--font-display);
           padding: 4px 9px;
           border: 0;
           border-radius: 999px;
@@ -213,11 +202,11 @@
         .card[data-status="desenvolvida"] .card__status { background: #d1fae5; color: #047857; }
 
         .barra { height: 4px; margin-top: 12px; background: #eef2f6; border-radius: 999px; overflow: hidden; }
-        .barra__preenchida { height: 100%; width: 0; background: var(--verde); border-radius: 999px; transition: width .3s; }
+        .barra__preenchida { height: 100%; width: 0; background: var(--color-career-brand); border-radius: 999px; transition: width .3s; }
         .card[data-status="em-andamento"] .barra__preenchida { width: 60%; }
         .card[data-status="desenvolvida"] .barra__preenchida { width: 100%; }
 
-        .card__progresso { font-size: 9px; color: var(--texto); margin-top: 6px; }
+        .card__progresso { font-size: 9px; color: var(--color-text-muted); margin-top: 6px; }
 
         @media (max-width: 800px) {
           .cards { grid-template-columns: repeat(2, 1fr); }

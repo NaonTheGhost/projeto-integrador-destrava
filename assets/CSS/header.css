@@ -83,7 +83,7 @@
   border: 2px solid var(--color-brand);
   border-radius: 50%;
   background: var(--color-brand-dark);
-  color: var(--color-on-brand);
+  color: var(--color-surface);
   font-size: 12px;
   font-weight: 700;
 }

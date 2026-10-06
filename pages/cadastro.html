@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="../assets/CSS/tokens.css">
     <link rel="stylesheet" href="../assets/CSS/cadastro-e-login.css">
+    <link rel="stylesheet" href="../assets/CSS/header.css">
 </head>
+
 <body>
+
     <main id="conteudo-cadastro">
+
         <div class="bloco bloco-cadastro">
             <div class="cadastro-marca">
-                <!--Logo ou nome do site. Adicionamos mais tarde.-->
+
             </div>
             <h1>Criar conta</h1>
-            <form id="form-cadastro" action="#" method="post">
+            <form id="form-cadastro" action="#" method="post" novalidate>
                 <div class="campo">
                     <label for="input-nome">Nome</label>
                     <input type="text" id="input-nome" name="nome" required>
@@ -21,7 +27,7 @@
 
                 <div class="campo">
                     <label for="input-email-cadastro">E-mail</label>
-                    <input type="email" id="input-email-cadastro" name="email">
+                    <input type="email" id="input-email-cadastro" name="email" required>
                 </div>
 
                 <div class="campo">
@@ -31,13 +37,13 @@
 
                 <div class="campo">
                     <label for="input-confirmar-senha">Confirme sua senha</label>
-                <input type="password" id="input-confirmar-senha" name="confirmarSenha" required>
+                    <input type="password" id="input-confirmar-senha" name="confirmarSenha" required>
                 </div>
 
                 <div class="campo campo-checkbox">
                     <label class="campo-checkbox">
                         <input type="checkbox" id="input-termos" name="termos" required>
-                        Li e aceito os <a href="#">termos de serviço</a>
+                        Li e aceito os <a href="termos-de-servico.html">termos de serviço</a>
                     </label>
                 </div>
                 <br>
@@ -50,5 +56,6 @@
         </div>
     </main>
 
-    <script src="/assets/JS/cadastro-e-login.js"></script>
+    <script src="../assets/JS/auth-utils.js"></script>
+    <script src="../assets/JS/cadastro.js"></script>
 </body>
