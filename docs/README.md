@@ -14,7 +14,7 @@ Muitos jovens sabem que querem construir uma carreira, mas não sabem por onde c
 |------|-------|
 | Gabriel | Product Owner |
 | Fernando | Scrum Master |
-| Fernando, Erik, Gabriel, Ana, Thauane, Jennifer e Lyvia | Desenvolvedores |
+| Fernando, Erik, Gabriel, Ana, Thauane e Lyvia | Desenvolvedores |
 
 ## Tecnologias
 HTML, CSS, JavaScript e localStorage
